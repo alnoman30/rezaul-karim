@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezaul Karim</title>
+    <!-- Splide CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body class="bg-[#]">
+
+    <!-- Desktop & Mobile Header -->
+    <header id="main-header"
+      class="fixed left-0 top-0 z-50 w-full py-4 lg:pt-8 ">
+      <div class="container flex w-full items-center justify-between gap-4">
+
+        <!-- 1. Logo -->
+        <div id="desktop-logo" class="shrink-0">
+          <a href="#"
+            class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
+            Rezaul Karim
+          </a>
+        </div>
+
+        <!-- 2. Centered Navigation (Desktop) -->
+        <div id="navPillWrap"
+          class="hidden lg:flex items-center justify-center">
+          <nav id="desktop-nav"
+            class="flex items-center rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md  gap-4 xl:gap-12">
+            <a href="#"
+              class="nav-item active rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+              Home
+            </a>
+
+            <div
+              class="nav-item group relative flex cursor-pointer items-center gap-1.5 rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+              <span>Services</span>
+              <svg
+                class="h-4 w-4 fill-current transition-transform duration-300 group-hover:rotate-180"
+                viewBox="0 0 20 20">
+                <path d="M10 13.334L5 8.33398H15L10 13.334Z" />
+              </svg>
+            </div>
+
+            <a href="#"
+              class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+              My Works
+            </a>
+
+            <a href="#"
+              class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+              About
+            </a>
+          </nav>
+        </div>
+
+        <!-- 3. Right Action / Mobile Toggle -->
+        <div class="flex items-center shrink-0">
+          <a id="desktop-cta" href="#"
+            class="hidden rounded-full bg-[#F36D04] px-6 py-2.5 font-manrope text-xl font-medium text-white hover:brightness-125 transition-all duration-500 lg:inline-flex">
+            Hire Me
+          </a>
+
+          <button id="mobile-menu-toggle" type="button"
+            aria-label="Toggle Navigation" aria-expanded="false"
+            class="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md lg:hidden">
+            <span class="line-1 h-0.5 w-6 rounded-full bg-[#F36D04]"></span>
+            <span class="line-2 h-0.5 w-5 rounded-full bg-white"></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Fullscreen Overlay Navigation -->
+    <div id="mobile-menu"
+      class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0a0a0d]/95 backdrop-blur-xl lg:hidden">
+      <nav class="flex flex-col items-center gap-6 text-center">
+        <a href="#"
+          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Home</a>
+        <a href="#"
+          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Services</a>
+        <a href="#"
+          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">My
+          Works</a>
+        <a href="#"
+          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">About</a>
+      </nav>
+
+      <a href="#"
+        class="mobile-link mt-4 rounded-full bg-[#F36D04] px-10 py-3.5 font-manrope text-lg font-semibold text-white shadow-[0_0_20px_rgba(243,109,4,0.4)] transition hover:bg-[#E06000]">
+        Hire Me
+      </a>
+    </div>
+
+    <!-- HERO SECTION CONTAINER -->
+    <section id="hero-section"
+      class="parallax hero-section relative flex min-h-screen h-screen w-full flex-col justify-start lg:justify-end overflow-hidden bg-[#]  pt-28 pb-6 lg:pb-12 lg:pt-0">
+
+      <!-- Radial Glow Ambient Gradient Layer -->
+      <div class="pointer-events-none absolute inset-0 z-0"></div>
+
+      <!-- Giant Background Watermark Text -->
+      <div id="watermark-text"
+        class="pointer-events-none absolute inset-0 z-0 flex select-none items-end justify-center pl-6 lg:items-center">
+        <img id="watermark-text" src="assets/images/Rezaul-text.webp" alt />
+      </div>
+
+      <!-- Platform icons backgrounda -->
+      <div
+        class="pointer-events-none absolute inset-0 z-0 flex select-none items-end lg:items-center justify-center">
+        <img src="assets/images/frameworks.webp" alt>
+      </div>
+
+      <!-- Person Cutout Image Overlay -->
+      <div id="person-cutout"
+        class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex justify-center">
+        <img id="person-cutout" src="assets/images/person.webp"
+          alt="Rezaul Karim"
+          class="h-[40vh] max-h-187.5 object-contain object-bottom sm:h-[55vh] lg:h-[75vh]" />
+      </div>
+
+      <!-- Bottom Vignette Fade -->
+      <div
+        class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[50%] bg-[linear-gradient(180deg,rgba(11,11,11,0)_61.9%,#0B0B0B_92.18%)]">
+      </div>
+
+      <!-- HERO CONTENT GRID -->
+      <main
+        class="container relative z-20 flex min-h-full w-full flex-col items-start justify-start gap-6 text-center lg:flex-row lg:items-end lg:justify-between lg:gap-8 lg:text-left">
+
+        <!-- Left Column: Primary Headline -->
+        <div class="w-full lg:flex-1">
+          <h1
+            class="font-hegarty text-[60px] md:text-[80px] lg:text-[70px] 2xl:text-[96px] font-normal leading-[100%] tracking-[-1.92px] text-white max-w-218">
+            Rank on Google.
+            Get cited by AI.
+          </h1>
+        </div>
+
+        <!-- Right Column: Paragraph & Action CTA -->
+        <div
+          class="flex w-full max-w-md mx-auto flex-col items-center gap-5 lg:items-start lg:gap-6">
+
+          <p
+            class="font-manrope text-sm md:text-base lg:text-xl font-normal leading-[130%] text-white">
+            5 years of agency SEO across every major CMS platform. I also
+            optimize for AI — AEO, GEO, LLMO. 120+ projects. New to Upwork, full
+            escrow on every project.
+          </p>
+
+          <!-- cta button -->
+          <a href="#"
+            class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+
+            <!-- Left Purple Segment -->
+            <div
+              class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
+              Hire me on Upwork
+            </div>
+
+            <!-- Inner Joint Graphic -->
+            <img src="assets/images/cta-button-join.svg" alt
+              class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+
+            <!-- Right Green Segment -->
+            <div
+              class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
+              <img src="assets/images/cta-up.svg" alt="Upwork"
+                class="h-full w-full shrink-0 select-none no-parallax" />
+            </div>
+
+          </a>
+
+        </div>
+
+      </main>
+
+    </section>
+
+    <!-- Marquee Section Container -->
+    <section class="w-full px-3 pt-4 pb-3 sm:px-4 sm:pt-5">
+      <div>
+        <div
+          class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-[60px] lg:py-[40px]">
+
+          <div id="marquee-splide" class="splide cursor-default"
+            aria-label="SEO Services Marquee">
+            <div class="splide__track">
+              <ul class="splide__list items-center">
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    Shopify SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    Webflow SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    WordPress SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    Wix SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    Technical SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+                <li
+                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                  <span
+                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                    On-Page SEO
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none"
+                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                    <path
+                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                      fill="#F36D04" />
+                  </svg>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistic section -->
+    <section class="w-full pt-3.75 pb-7.5 md:pb-15 lg:pb-22.5">
+      <div class="container">
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Card 1 -->
+          <div
+            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
+
+            <img src="assets/images/static-card-shade.svg" alt
+              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
+
+            <div
+              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+              <h3
+                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
+                <span class="counter" data-target="5" data-suffix="yr">
+                  5yr
+                </span>
+              </h3>
+
+              <p
+                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
+                Agency experience
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
+
+            <img src="assets/images/static-card-shade.svg" alt
+              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
+
+            <div
+              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+              <h3
+                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
+                <span class="counter" data-target="120" data-suffix="+">
+                  120+
+                </span>
+              </h3>
+
+              <p
+                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
+                Projects delivered
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
+
+            <img src="assets/images/static-card-shade.svg" alt
+              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
+
+            <div
+              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+              <h3
+                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
+                <span class="counter" data-target="4" data-suffix="×">
+                  4×
+                </span>
+              </h3>
+
+              <p
+                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
+                Avg. traffic lift
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
+
+            <img src="assets/images/static-card-shade.svg" alt
+              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
+
+            <div
+              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+              <h3
+                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
+                AI
+              </h3>
+
+              <p
+                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
+                Cited in ChatGPT · Gemini · Perplexity
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Section Container -->
+    <section class="w-full bg-[#F3F3F3] section-padding">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="mb-6 md:mb-8 lg:mb-12 flex flex-col items-center text-center">
+          <!-- Tag Pill -->
+          <span
+            class=" inline-flex items-center justify-center rounded-full border border-[#523EC5] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(82,62,197,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#523EC5] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
+            Services
+          </span>
+
+          <!-- Main Title -->
+          <h2
+            class="font-hegarty text-[#1C1C1C] text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
+            Eight specialized services
+          </h2>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- CARD 1:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-shopify.webp" alt="Shopify"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  Shopify SEO
+                </h3>
+
+                <!-- Badge -->
+                <span
+                  class="rounded-full bg-[linear-gradient(96deg,#523EC5_7.72%,#F36D04_100%)] px-3 py-1 font-manrope text-[11px] font-semibold leading-[125%] text-white sm:px-4 sm:py-1.25 sm:text-xs">
+                  Most requested
+                </span>
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Schema · CWV · Collection SEO · Canonical · Indexation
+              </p>
+            </div>
+          </div>
+          <!-- CARD 2:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-webflow.webp" alt="Webflow SEO"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  Webflow SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                CMS slug · Schema · Canonical · CWV · Technical audit
+              </p>
+            </div>
+          </div>
+          <!-- CARD 3:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-WordPress.webp" alt="WordPress"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  WordPress SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Yoast/RankMath · Schema · Crawl · WooCommerce SEO
+              </p>
+            </div>
+          </div>
+          <!-- CARD 4:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-Wix.webp" alt="Wix"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  Wix SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                URL structure · Schema · Indexation · On-page
+              </p>
+            </div>
+          </div>
+          <!-- CARD 5:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-squarespace.webp" alt="Squarespace"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  Squarespace SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Schema · Canonicals · Speed · On-page
+              </p>
+            </div>
+          </div>
+          <!-- CARD 6:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-framer.webp" alt="Framer"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  Framer SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Technical · Schema · CMS SEO · Indexation
+              </p>
+            </div>
+          </div>
+          <!-- CARD 7:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-technical.webp" alt="Technical"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                 Technical SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Technical · Schema · CMS SEO · Indexation
+              </p>
+            </div>
+          </div>
+          <!-- CARD 8:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-45 w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-onpage.webp" alt="On-Page"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  On-Page SEO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                Keywords · Titles · Headings · Links · E-E-A-T
+              </p>
+            </div>
+          </div>
+          <!-- CARD 9:  -->
+          <div
+            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
+            <!-- Full Image Area -->
+            <div
+              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
+              <img src="assets/images/service-aeo.webp" alt="AEO"
+                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+            </div>
+
+            <!-- Card Text -->
+            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+              <div
+                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+                <!-- Title -->
+                <h3
+                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
+                  AEO · GEO · LLMO
+                </h3>
+
+                <!-- Badge -->
+
+              </div>
+
+              <!-- Description -->
+              <p
+                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+                AI Overviews · Featured snippets · ChatGPT · Gemini · Perplexity
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+<!-- Load More / CTA Button -->
+<div class="mt-10 flex justify-center md:mt-12">
+  <a
+    href=""
+    class="rounded-full bg-[#523EC5] px-6 py-4 font-manrope text-base font-medium leading-[120%] text-white transition-all duration-300 hover:bg-[#432FB0]  sm:text-lg md:text-xl"
+  >
+    See full service details
+  </a>
+</div>
+      </div>
+    </section>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js">
+  </script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+
+</html>
