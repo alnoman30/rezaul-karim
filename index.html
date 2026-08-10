@@ -1,734 +1,1839 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rezaul Karim</title>
-    <!-- Splide CSS -->
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rezaul Karim</title>
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-  <body class="bg-[#]">
+<body class="bg-[#]">
 
-    <!-- Desktop & Mobile Header -->
-    <header id="main-header"
-      class="fixed left-0 top-0 z-50 w-full py-4 lg:pt-8 ">
-      <div class="container flex w-full items-center justify-between gap-4">
+  <!-- Desktop & Mobile Header start -->
+  <header id="main-header" class="fixed left-0 top-0 z-50 w-full  lg:pt-8 ">
+    <div class="container flex w-full items-center justify-between gap-4">
 
-        <!-- 1. Logo -->
-        <div id="desktop-logo" class="shrink-0">
-          <a href="#"
-            class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
-            Rezaul Karim
-          </a>
-        </div>
-
-        <!-- 2. Centered Navigation (Desktop) -->
-        <div id="navPillWrap"
-          class="hidden lg:flex items-center justify-center">
-          <nav id="desktop-nav"
-            class="flex items-center rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md  gap-4 xl:gap-12">
-            <a href="#"
-              class="nav-item active rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
-              Home
-            </a>
-
-            <div
-              class="nav-item group relative flex cursor-pointer items-center gap-1.5 rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
-              <span>Services</span>
-              <svg
-                class="h-4 w-4 fill-current transition-transform duration-300 group-hover:rotate-180"
-                viewBox="0 0 20 20">
-                <path d="M10 13.334L5 8.33398H15L10 13.334Z" />
-              </svg>
-            </div>
-
-            <a href="#"
-              class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
-              My Works
-            </a>
-
-            <a href="#"
-              class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
-              About
-            </a>
-          </nav>
-        </div>
-
-        <!-- 3. Right Action / Mobile Toggle -->
-        <div class="flex items-center shrink-0">
-          <a id="desktop-cta" href="#"
-            class="hidden rounded-full bg-[#F36D04] px-6 py-2.5 font-manrope text-xl font-medium text-white hover:brightness-125 transition-all duration-500 lg:inline-flex">
-            Hire Me
-          </a>
-
-          <button id="mobile-menu-toggle" type="button"
-            aria-label="Toggle Navigation" aria-expanded="false"
-            class="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md lg:hidden">
-            <span class="line-1 h-0.5 w-6 rounded-full bg-[#F36D04]"></span>
-            <span class="line-2 h-0.5 w-5 rounded-full bg-white"></span>
-          </button>
-        </div>
-
+      <!-- 1. Logo -->
+      <div id="desktop-logo" class="shrink-0">
+        <a href="#"
+          class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
+          Rezaul Karim
+        </a>
       </div>
-    </header>
 
-    <!-- Mobile Fullscreen Overlay Navigation -->
-    <div id="mobile-menu"
-      class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0a0a0d]/95 backdrop-blur-xl lg:hidden">
-      <nav class="flex flex-col items-center gap-6 text-center">
-        <a href="#"
-          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Home</a>
-        <a href="#"
-          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Services</a>
-        <a href="#"
-          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">My
-          Works</a>
-        <a href="#"
-          class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">About</a>
-      </nav>
+      <!-- 2. Centered Navigation (Desktop) -->
+      <div id="navPillWrap" class="hidden lg:flex items-center justify-center">
+        <nav id="desktop-nav"
+          class="flex items-center rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md  gap-4 xl:gap-12">
+          <a href="#"
+            class="nav-item active rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+            Home
+          </a>
 
+          <div
+            class="nav-item group relative flex cursor-pointer items-center gap-1.5 rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+            <span>Services</span>
+            <svg class="h-4 w-4 fill-current transition-transform duration-300 group-hover:rotate-180"
+              viewBox="0 0 20 20">
+              <path d="M10 13.334L5 8.33398H15L10 13.334Z" />
+            </svg>
+          </div>
+
+          <a href="#"
+            class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+            My Works
+          </a>
+
+          <a href="#"
+            class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+            About
+          </a>
+        </nav>
+      </div>
+
+      <!-- 3. Right Action / Mobile Toggle -->
+      <div class="flex items-center shrink-0">
+        <a id="desktop-cta" href="#"
+          class="hidden rounded-full bg-[#F36D04] px-6 py-2.5 font-manrope text-xl font-medium text-white hover:brightness-125 transition-all duration-500 lg:inline-flex">
+          Hire Me
+        </a>
+
+        <button id="mobile-menu-toggle" type="button" aria-label="Toggle Navigation" aria-expanded="false"
+          class="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md lg:hidden">
+          <span class="line-1 h-0.5 w-6 rounded-full bg-[#F36D04]"></span>
+          <span class="line-2 h-0.5 w-5 rounded-full bg-white"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+  <!-- Desktop & Mobile Header ends -->
+
+  <!-- Mobile Fullscreen Overlay Navigation Start -->
+  <div id="mobile-menu"
+    class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0a0a0d]/95 backdrop-blur-xl lg:hidden">
+    <nav class="flex flex-col items-center gap-6 text-center">
+      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Home</a>
       <a href="#"
-        class="mobile-link mt-4 rounded-full bg-[#F36D04] px-10 py-3.5 font-manrope text-lg font-semibold text-white shadow-[0_0_20px_rgba(243,109,4,0.4)] transition hover:bg-[#E06000]">
-        Hire Me
-      </a>
+        class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Services</a>
+      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">My
+        Works</a>
+      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">About</a>
+    </nav>
+
+    <a href="#"
+      class="mobile-link mt-4 rounded-full bg-[#F36D04] px-10 py-3.5 font-manrope text-lg font-semibold text-white shadow-[0_0_20px_rgba(243,109,4,0.4)] transition hover:bg-[#E06000]">
+      Hire Me
+    </a>
+  </div>
+  <!-- Mobile Fullscreen Overlay Navigation Start -->
+
+  <!-- Hero section content start -->
+  <section id="hero-section"
+    class="parallax hero-section relative flex min-h-screen h-screen w-full flex-col justify-start lg:justify-end overflow-hidden bg-[#]  pt-28 pb-6 lg:pb-12 lg:pt-0">
+
+    <!-- Radial Glow Ambient Gradient Layer -->
+    <div class="pointer-events-none absolute inset-0 z-0"></div>
+
+    <!-- Giant Background Watermark Text -->
+    <div id="watermark-text"
+      class="pointer-events-none absolute inset-0 z-0 flex select-none items-end justify-center pl-6 lg:items-center">
+      <img id="watermark-text" src="assets/images/Rezaul-text.webp" alt />
     </div>
 
-    <!-- HERO SECTION CONTAINER -->
-    <section id="hero-section"
-      class="parallax hero-section relative flex min-h-screen h-screen w-full flex-col justify-start lg:justify-end overflow-hidden bg-[#]  pt-28 pb-6 lg:pb-12 lg:pt-0">
+    <!-- Platform icons backgrounda -->
+    <div class="pointer-events-none absolute inset-0 z-0 flex select-none items-end lg:items-center justify-center">
+      <img src="assets/images/frameworks.webp" alt>
+    </div>
 
-      <!-- Radial Glow Ambient Gradient Layer -->
-      <div class="pointer-events-none absolute inset-0 z-0"></div>
+    <!-- Person Cutout Image Overlay -->
+    <div id="person-cutout" class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex justify-center">
+      <img id="person-cutout" src="assets/images/person.webp" alt="Rezaul Karim"
+        class="h-[40vh] max-h-187.5 object-contain object-bottom sm:h-[55vh] lg:h-[75vh]" />
+    </div>
 
-      <!-- Giant Background Watermark Text -->
-      <div id="watermark-text"
-        class="pointer-events-none absolute inset-0 z-0 flex select-none items-end justify-center pl-6 lg:items-center">
-        <img id="watermark-text" src="assets/images/Rezaul-text.webp" alt />
+    <!-- Bottom Vignette Fade -->
+    <div
+      class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[50%] bg-[linear-gradient(180deg,rgba(11,11,11,0)_61.9%,#0B0B0B_92.18%)]">
+    </div>
+
+    <!-- HERO CONTENT GRID -->
+    <main
+      class="container relative z-20 flex min-h-full w-full flex-col items-start justify-start gap-6 text-center lg:flex-row lg:items-end lg:justify-between lg:gap-8 lg:text-left">
+
+      <!-- Left Column: Primary Headline -->
+      <div class="w-full lg:flex-1">
+        <h1
+          class="font-hegarty text-[60px] md:text-[80px] lg:text-[70px] 2xl:text-[96px] font-normal leading-[100%] tracking-[-1.92px] text-white max-w-218">
+          Rank on Google.
+          Get cited by AI.
+        </h1>
       </div>
 
-      <!-- Platform icons backgrounda -->
+      <!-- Right Column: Paragraph & Action CTA -->
+      <div class="flex w-full max-w-md mx-auto flex-col items-center gap-5 lg:items-start lg:gap-6">
+
+        <p class="font-manrope text-sm md:text-base lg:text-xl font-normal leading-[130%] text-white">
+          5 years of agency SEO across every major CMS platform. I also
+          optimize for AI — AEO, GEO, LLMO. 120+ projects. New to Upwork, full
+          escrow on every project.
+        </p>
+
+        <!-- cta button -->
+        <a href="#"
+          class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+
+          <!-- Left Purple Segment -->
+          <div
+            class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
+            Hire me on Upwork
+          </div>
+
+          <!-- Inner Joint Graphic -->
+          <img src="assets/images/cta-button-join.svg" alt
+            class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+
+          <!-- Right Green Segment -->
+          <div
+            class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
+            <img src="assets/images/cta-up.svg" alt="Upwork" class="h-full w-full shrink-0 select-none no-parallax" />
+          </div>
+
+        </a>
+
+      </div>
+
+    </main>
+
+  </section>
+  <!-- Hero section content ends -->
+
+  <!-- Marquee Section Start -->
+  <section class=" px-3 pt-4 pb-3 sm:px-4 sm:pt-5">
+    <div>
       <div
-        class="pointer-events-none absolute inset-0 z-0 flex select-none items-end lg:items-center justify-center">
-        <img src="assets/images/frameworks.webp" alt>
-      </div>
+        class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-[60px] lg:py-[40px]">
 
-      <!-- Person Cutout Image Overlay -->
-      <div id="person-cutout"
-        class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex justify-center">
-        <img id="person-cutout" src="assets/images/person.webp"
-          alt="Rezaul Karim"
-          class="h-[40vh] max-h-187.5 object-contain object-bottom sm:h-[55vh] lg:h-[75vh]" />
-      </div>
+        <div id="marquee-splide" class="splide cursor-default" aria-label="SEO Services Marquee">
+          <div class="splide__track">
+            <ul class="splide__list items-center">
 
-      <!-- Bottom Vignette Fade -->
-      <div
-        class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[50%] bg-[linear-gradient(180deg,rgba(11,11,11,0)_61.9%,#0B0B0B_92.18%)]">
-      </div>
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  Shopify SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
 
-      <!-- HERO CONTENT GRID -->
-      <main
-        class="container relative z-20 flex min-h-full w-full flex-col items-start justify-start gap-6 text-center lg:flex-row lg:items-end lg:justify-between lg:gap-8 lg:text-left">
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  Webflow SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
 
-        <!-- Left Column: Primary Headline -->
-        <div class="w-full lg:flex-1">
-          <h1
-            class="font-hegarty text-[60px] md:text-[80px] lg:text-[70px] 2xl:text-[96px] font-normal leading-[100%] tracking-[-1.92px] text-white max-w-218">
-            Rank on Google.
-            Get cited by AI.
-          </h1>
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  WordPress SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
+
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  Wix SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
+
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  Technical SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
+
+              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+                <span
+                  class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
+                  On-Page SEO
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
+                  <path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
+                    fill="#F36D04" />
+                </svg>
+              </li>
+
+            </ul>
+          </div>
         </div>
 
-        <!-- Right Column: Paragraph & Action CTA -->
+      </div>
+    </div>
+  </section>
+  <!-- Marquee Section ends -->
+
+  <!-- Statistic section start -->
+  <section class="pt-3.75 pb-7.5 md:pb-15 lg:pb-22.5">
+    <div class="container">
+
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Card 1 -->
         <div
-          class="flex w-full max-w-md mx-auto flex-col items-center gap-5 lg:items-start lg:gap-6">
+          class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#D8D8D8] bg-white p-5  sm:p-6 l md:p-8 ">
 
-          <p
-            class="font-manrope text-sm md:text-base lg:text-xl font-normal leading-[130%] text-white">
-            5 years of agency SEO across every major CMS platform. I also
-            optimize for AI — AEO, GEO, LLMO. 120+ projects. New to Upwork, full
-            escrow on every project.
-          </p>
+          <img src="assets/images/static-card-shade.svg" alt
+            class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
-          <!-- cta button -->
-          <a href="#"
-            class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+          <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+              <span class="counter" data-target="5" data-suffix="yr">
+                5yr
+              </span>
+            </h3>
 
-            <!-- Left Purple Segment -->
-            <div
-              class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-              Hire me on Upwork
-            </div>
-
-            <!-- Inner Joint Graphic -->
-            <img src="assets/images/cta-button-join.svg" alt
-              class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
-
-            <!-- Right Green Segment -->
-            <div
-              class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-              <img src="assets/images/cta-up.svg" alt="Upwork"
-                class="h-full w-full shrink-0 select-none no-parallax" />
-            </div>
-
-          </a>
-
+            <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
+              Agency experience
+            </p>
+          </div>
         </div>
 
-      </main>
-
-    </section>
-
-    <!-- Marquee Section Container -->
-    <section class="w-full px-3 pt-4 pb-3 sm:px-4 sm:pt-5">
-      <div>
+        <!-- Card 2 -->
         <div
-          class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-[60px] lg:py-[40px]">
+          class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#D8D8D8] bg-white p-5  sm:p-6 l md:p-8 ">
 
-          <div id="marquee-splide" class="splide cursor-default"
-            aria-label="SEO Services Marquee">
-            <div class="splide__track">
-              <ul class="splide__list items-center">
+          <img src="assets/images/static-card-shade.svg" alt
+            class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    Shopify SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+          <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+              <span class="counter" data-target="120" data-suffix="+">
+                120+
+              </span>
+            </h3>
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    Webflow SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+            <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
+              Projects delivered
+            </p>
+          </div>
+        </div>
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    WordPress SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+        <!-- Card 3 -->
+        <div
+          class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#D8D8D8] bg-white p-5  sm:p-6 l md:p-8 ">
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    Wix SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+          <img src="assets/images/static-card-shade.svg" alt
+            class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    Technical SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+          <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+              <span class="counter" data-target="4" data-suffix="×">
+                4×
+              </span>
+            </h3>
 
-                <li
-                  class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
-                  <span
-                    class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
-                    On-Page SEO
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                    viewBox="0 0 32 32" fill="none"
-                    class="h-4 w-4 shrink-0 sm:h-5 sm:w-5 lg:h-6 lg:w-6">
-                    <path
-                      d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z"
-                      fill="#F36D04" />
-                  </svg>
-                </li>
+            <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
+              Avg. traffic lift
+            </p>
+          </div>
+        </div>
 
-              </ul>
-            </div>
+        <!-- Card 4 -->
+        <div
+          class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl border border-[#D8D8D8] bg-white p-5  sm:p-6 l md:p-8 ">
+
+          <img src="assets/images/static-card-shade.svg" alt
+            class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
+
+          <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+              AI
+            </h3>
+
+            <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
+              Cited in ChatGPT · Gemini · Perplexity
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Statistic section ends -->
+
+  <!-- Service Section Start -->
+  <section class="mx-2 lg:mx-5 rounded-xl sm:rounded-2xl lg:rounded-[36px] bg-[#F3F3F3] section-padding">
+
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="mb-6 md:mb-8 lg:mb-12 flex flex-col items-center text-center">
+        <!-- Tag Pill -->
+        <span
+          class=" inline-flex items-center justify-center rounded-full border border-[#523EC5] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(82,62,197,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#523EC5] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
+          Services
+        </span>
+
+        <!-- Main Title -->
+        <h2
+          class="font-hegarty text-[#1C1C1C] text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
+          Eight specialized services
+        </h2>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- CARD 1:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-shopify.webp" alt="Shopify"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
           </div>
 
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Shopify SEO
+              </h3>
+
+              <!-- Badge -->
+              <span
+                class="rounded-full bg-[linear-gradient(96deg,#523EC5_7.72%,#F36D04_100%)] px-3 py-1 font-manrope text-[11px] font-semibold leading-[125%] text-white sm:px-4 sm:py-1.25 sm:text-xs">
+                Most requested
+              </span>
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Schema · CWV · Collection SEO · Canonical · Indexation
+            </p>
+          </div>
+        </div>
+        <!-- CARD 2:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-webflow.webp" alt="Webflow SEO"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Webflow SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              CMS slug · Schema · Canonical · CWV · Technical audit
+            </p>
+          </div>
+        </div>
+        <!-- CARD 3:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-wordpress.webp" alt="WordPress"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                WordPress SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Yoast/RankMath · Schema · Crawl · WooCommerce SEO
+            </p>
+          </div>
+        </div>
+        <!-- CARD 4:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-wix.webp" alt="Wix"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Wix SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              URL structure · Schema · Indexation · On-page
+            </p>
+          </div>
+        </div>
+        <!-- CARD 5:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-squarespace.webp" alt="Squarespace"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Squarespace SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Schema · Canonicals · Speed · On-page
+            </p>
+          </div>
+        </div>
+        <!-- CARD 6:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-framer.webp" alt="Framer"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Framer SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Technical · Schema · CMS SEO · Indexation
+            </p>
+          </div>
+        </div>
+        <!-- CARD 7:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-technical.webp" alt="Technical"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                Technical SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Technical · Schema · CMS SEO · Indexation
+            </p>
+          </div>
+        </div>
+        <!-- CARD 8:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-45 w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-onpage.webp" alt="On-Page"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                On-Page SEO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              Keywords · Titles · Headings · Links · E-E-A-T
+            </p>
+          </div>
+        </div>
+        <!-- CARD 9:  -->
+        <div
+          class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
+          <!-- Full Image Area -->
+          <div
+            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            <img src="assets/images/service-aeo.webp" alt="AEO"
+              class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+          </div>
+
+          <!-- Card Text -->
+          <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
+            <div class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
+              <!-- Title -->
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black">
+                AEO · GEO · LLMO
+              </h3>
+
+              <!-- Badge -->
+
+            </div>
+
+            <!-- Description -->
+            <p
+              class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
+              AI Overviews · Featured snippets · ChatGPT · Gemini · Perplexity
+            </p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Statistic section -->
-    <section class="w-full pt-3.75 pb-7.5 md:pb-15 lg:pb-22.5">
-      <div class="container">
 
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-
-          <!-- Card 1 -->
-          <div
-            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
-
-            <img src="assets/images/static-card-shade.svg" alt
-              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
-
-            <div
-              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-              <h3
-                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
-                <span class="counter" data-target="5" data-suffix="yr">
-                  5yr
-                </span>
-              </h3>
-
-              <p
-                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
-                Agency experience
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
-
-            <img src="assets/images/static-card-shade.svg" alt
-              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
-
-            <div
-              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-              <h3
-                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
-                <span class="counter" data-target="120" data-suffix="+">
-                  120+
-                </span>
-              </h3>
-
-              <p
-                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
-                Projects delivered
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
-
-            <img src="assets/images/static-card-shade.svg" alt
-              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
-
-            <div
-              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-              <h3
-                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
-                <span class="counter" data-target="4" data-suffix="×">
-                  4×
-                </span>
-              </h3>
-
-              <p
-                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
-                Avg. traffic lift
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="relative flex flex-col items-start justify-between gap-4 overflow-hidden rounded-xl border border-[#D8D8D8] bg-white p-5 sm:rounded-2xl sm:p-6 md:rounded-2xl md:p-8 lg:rounded-3xl">
-
-            <img src="assets/images/static-card-shade.svg" alt
-              class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
-
-            <div
-              class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-              <h3
-                class="font-manrope text-[36px] font-extrabold leading-none sm:text-[42px] md:text-[48px]">
-                AI
-              </h3>
-
-              <p
-                class="font-manrope text-base leading-tight text-[#373737] sm:text-lg">
-                Cited in ChatGPT · Gemini · Perplexity
-              </p>
-            </div>
-          </div>
-
-        </div>
+      <!-- Load More / CTA Button -->
+      <div class="mt-6 sm:mt-8 flex justify-center md:mt-12">
+        <a href=""
+          class="rounded-full bg-[#523EC5] px-4 py-3 md:px-6 md:py-4 font-manrope text-sm sm:text-base md:tetx-lg lg:text-xl font-medium leading-[120%] text-white transition-all duration-300 hover:brightness-125">
+          See full service details
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- Service Section Ends -->
 
-    <!-- Main Section Container -->
-    <section class="w-full bg-[#F3F3F3] section-padding">
-      <div class="container">
+  <!-- Experience (Why coose me) section start  -->
+  <section class="bg-white section-padding ">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-start">
 
-        <!-- Section Header -->
-        <div class="mb-6 md:mb-8 lg:mb-12 flex flex-col items-center text-center">
-          <!-- Tag Pill -->
+        <!-- Left Column: 5 Grid -->
+        <div
+          class="flex flex-col items-center gap-4 text-center lg:sticky lg:top-20 lg:col-span-5 lg:items-start lg:text-left mb-3 sm:mb-6">
+          <!-- Badge Pill -->
           <span
-            class=" inline-flex items-center justify-center rounded-full border border-[#523EC5] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(82,62,197,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#523EC5] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
-            Services
+            class="inline-flex items-center justify-center rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-xs font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] md:px-6 md:py-3 md:text-sm lg:text-base">
+            Why choose me
           </span>
 
-          <!-- Main Title -->
+          <!-- Title -->
           <h2
-            class="font-hegarty text-[#1C1C1C] text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
-            Eight specialized services
+            class="font-hegarty text-[30px] font-normal leading-[100%] tracking-[1.28px] text-[#1C1C1C] md:text-[48px] lg:text-left lg:text-[64px]">
+            Platform-deep. AI-ready.
           </h2>
         </div>
 
-        <!-- Cards Grid -->
-        <div class="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Right Column: 7 Grid -->
+        <div class="flex w-full flex-col gap-3 md:gap-6 lg:col-span-7">
 
-          <!-- CARD 1:  -->
+          <!-- CARD 1: Active State by Default -->
           <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
+            class="group experience-card experience-card-active flex flex-col items-start gap-5 rounded-2xl sm:rounded-3xl md:rounded-[36px] sm:p-8 md:gap-8 p-5 sm:gap-6 md:p-12"
+            style="background: linear-gradient(132deg, #FFF 80.61%, #FFB880 97.87%); box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.15);">
+            <!-- Top Icon Image Container -->
             <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-shopify.webp" alt="Shopify"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              class="flex h-15 w-15 sm:h-18 sm:w-18 md:h-22.5 md:w-22.5 lg:h-27.75 lg:w-27.75 items-center justify-center rounded-full bg-[linear-gradient(164deg,#EBE8FF_9.54%,#FFF_91.59%)] shrink-0">
+              <img src="assets/images/experience-icon-1.svg" alt="CMS Icon"
+                class="h-7.5 w-7.5 sm:h-12.5 sm:w-12.5 md:h-16 md:w-16 select-none object-contain" />
             </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  Shopify SEO
-                </h3>
+            <!-- Content Stack -->
+            <div class="flex w-full flex-col items-start">
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black mb-2 sm:mb-4 ">
+                Platform depth
+              </h3>
 
-                <!-- Badge -->
-                <span
-                  class="rounded-full bg-[linear-gradient(96deg,#523EC5_7.72%,#F36D04_100%)] px-3 py-1 font-manrope text-[11px] font-semibold leading-[125%] text-white sm:px-4 sm:py-1.25 sm:text-xs">
-                  Most requested
-                </span>
-              </div>
-
-              <!-- Description -->
               <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Schema · CWV · Collection SEO · Canonical · Indexation
+                class="font-manrope text-sm sm:text-base md:text-lg font-normal leading-[150%] text-[#6E6E6E] sm:leading-[140%]  md:leading-[130%]">
+                I know Shopify's Liquid code, Webflow's CMS architecture, WordPress's
+                crawl patterns — not generic checklists. Platform-level expertise is
+                where the value is.
               </p>
             </div>
           </div>
-          <!-- CARD 2:  -->
+
+          <!-- CARD 2: Default Static State -->
           <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
+            class="group experience-card experience-card-hover flex flex-col items-start gap-5 rounded-2xl sm:rounded-3xl md:rounded-[36px] bg-[#F3F3F3] p-5 sm:gap-6 sm:p-8 md:gap-8 md:p-12">
+            <!-- Top Icon Image Container -->
             <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-webflow.webp" alt="Webflow SEO"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              class="flex h-15 w-15 sm:h-18 sm:w-18 md:h-22.5 md:w-22.5 lg:h-27.75 lg:w-27.75 items-center justify-center rounded-full bg-white transition-colors duration-300 group-hover:bg-[linear-gradient(164deg,#EBE8FF_9.54%,#FFF_91.59%)] shrink-0">
+              <img src="assets/images/experience-icon-2.svg" alt="SEO Icon"
+                class="h-7.5 w-7.5 sm:h-12.5 sm:w-12.5 md:h-16 md:w-16 select-none object-contain" />
             </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  Webflow SEO
-                </h3>
+            <!-- Content Stack -->
+            <div class="flex w-full flex-col items-start">
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black mb-2 sm:mb-4 ">
+                SEO + AI SEO
+              </h3>
 
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
               <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                CMS slug · Schema · Canonical · CWV · Technical audit
+                class="font-manrope text-sm sm:text-base md:text-lg font-normal leading-[150%] text-[#6E6E6E] sm:leading-[140%]  md:leading-[130%]">
+                AEO, GEO, LLMO compound on top of strong technical SEO. Rank in Google
+                and get cited by AI — both at once.
               </p>
             </div>
           </div>
-          <!-- CARD 3:  -->
+
+          <!-- CARD 3: Default Static State -->
           <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
+            class="group experience-card experience-card-hover flex flex-col items-start gap-5 rounded-2xl sm:rounded-3xl md:rounded-[36px] bg-[#F3F3F3] p-5 sm:gap-6 sm:p-8 md:gap-8 md:p-12">
+            <!-- Top Icon Image Container -->
             <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-wordpress.webp" alt="WordPress"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              class="flex h-15 w-15 sm:h-18 sm:w-18 md:h-22.5 md:w-22.5 lg:h-27.75 lg:w-27.75 items-center justify-center rounded-full bg-white transition-colors duration-300 group-hover:bg-[linear-gradient(164deg,#EBE8FF_9.54%,#FFF_91.59%)] shrink-0">
+              <img src="assets/images/experience-icon-3.svg" alt="LLMO Icon"
+                class="h-9.5 w-9.5 sm:h-12.5 sm:w-12.5 md:h-16 md:w-16 select-none object-contain" />
             </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  WordPress SEO
-                </h3>
+            <!-- Content Stack -->
+            <div class="flex w-full flex-col items-start">
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black mb-2 sm:mb-4 ">
+                LLMO
+              </h3>
 
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
               <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Yoast/RankMath · Schema · Crawl · WooCommerce SEO
+                class="font-manrope text-sm sm:text-base md:text-lg font-normal leading-[150%] text-[#6E6E6E] sm:leading-[140%]  md:leading-[130%]">
+                Client brands already cited in ChatGPT and Gemini. I know what makes content LLM-citable.
               </p>
             </div>
           </div>
-          <!-- CARD 4:  -->
+          <!-- CARD 4: Default Static State -->
           <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
+            class="group experience-card experience-card-hover flex flex-col items-start gap-5 rounded-2xl sm:rounded-3xl md:rounded-[36px] bg-[#F3F3F3] p-5 sm:gap-6 sm:p-8 md:gap-8 md:p-12">
+            <!-- Top Icon Image Container -->
             <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-Wix.webp" alt="Wix"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              class="flex h-15 w-15 sm:h-18 sm:w-18 md:h-22.5 md:w-22.5 lg:h-27.75 lg:w-27.75 items-center justify-center rounded-full bg-white transition-colors duration-300 group-hover:bg-[linear-gradient(164deg,#EBE8FF_9.54%,#FFF_91.59%)] shrink-0">
+              <img src="assets/images/experience-icon-4.svg" alt="Revenue first Icon"
+                class="h-9.5 w-9.5 sm:h-12.5 sm:w-12.5 md:h-16 md:w-16 select-none object-contain" />
             </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  Wix SEO
-                </h3>
+            <!-- Content Stack -->
+            <div class="flex w-full flex-col items-start">
+              <h3
+                class="font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-black mb-2 sm:mb-4 ">
+                Revenue first
+              </h3>
 
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
               <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                URL structure · Schema · Indexation · On-page
+                class="font-manrope text-sm sm:text-base md:text-lg font-normal leading-[150%] text-[#6E6E6E] sm:leading-[140%]  md:leading-[130%]">
+                Rankings are a means. Revenue, reduced ad spend, and AI citations are the real measures of success.
               </p>
             </div>
           </div>
-          <!-- CARD 5:  -->
-          <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
-            <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-squarespace.webp" alt="Squarespace"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
-            </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  Squarespace SEO
-                </h3>
+        </div>
 
-                <!-- Badge -->
+      </div>
+    </div>
+  </section>
+  <!-- Experience (Why coose me) section Ends  -->
 
-              </div>
 
-              <!-- Description -->
-              <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Schema · Canonicals · Speed · On-page
-              </p>
-            </div>
+  <!-- How we work section start -->
+  <section class="relative  bg-[#121212] bg-cover bg-center bg-no-repeat section-padding overflow-hidden"
+    style="background-image: url('assets/images/proccess-grain-banner.webp');">
+    <!-- Purple Ellipse Background -->
+    <div
+      class="pointer-events-none absolute left-1/2 top-1/2 z-0 h-110 w-110 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#523EC5] opacity-70 blur-[292px]"
+      aria-hidden="true"></div>
+    <div class="container relative z-10">
+
+      <!-- Header Block -->
+      <div class="mb-6 md:mb-8 lg:mb-12 xl:mb-15 flex flex-col items-center text-center">
+        <!-- Tag Pill -->
+        <span
+          class=" inline-flex items-center justify-center rounded-full border border-[#F36D04] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(243,109,4,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#F36D04] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
+          Process
+        </span>
+
+        <!-- Main Title -->
+        <h2
+          class="font-hegarty text-white text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
+          How we work
+        </h2>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- STEP 01 -->
+        <div
+          class="process-card relative flex flex-col justify-between rounded-2xl sm:rounded-3xl md:rounded-[28px] lg:rounded-[36px] px-5 py-6 transition-transform duration-300  sm:px-6 sm:py-7  lg:px-6 lg:py-8">
+          <div>
+            <!-- Process number svg -->
+            <img src="assets/images/process-number-01.svg" alt="01"
+              class="process-number block h-14 w-22.5 select-none object-contain sm:h-16 sm:w-25 lg:h-18 lg:w-27.5" />
+
+            <!-- Card title -->
+            <h3
+              class="mt-4 font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-white sm:mt-5">
+              Free audit
+            </h3>
+
+            <!-- Card paragraph -->
+            <p
+              class="mt-3 font-manrope text-sm sm:text-base md:text-lg font-normal leading-[140%] text-white opacity-[0.6] sm:mt-4  sm:leading-[130%]">
+              30-min call. I identify the 3 biggest issues and what to fix first.
+            </p>
           </div>
-          <!-- CARD 6:  -->
-          <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
-            <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-framer.webp" alt="Framer"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
-            </div>
 
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  Framer SEO
-                </h3>
-
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
-              <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Technical · Schema · CMS SEO · Indexation
-              </p>
-            </div>
-          </div>
-          <!-- CARD 7:  -->
-          <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
-            <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-technical.webp" alt="Technical"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
-            </div>
-
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                 Technical SEO
-                </h3>
-
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
-              <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Technical · Schema · CMS SEO · Indexation
-              </p>
-            </div>
-          </div>
-          <!-- CARD 8:  -->
-          <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
-            <div
-              class="h-45 w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-onpage.webp" alt="On-Page"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
-            </div>
-
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  On-Page SEO
-                </h3>
-
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
-              <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                Keywords · Titles · Headings · Links · E-E-A-T
-              </p>
-            </div>
-          </div>
-          <!-- CARD 9:  -->
-          <div
-            class="service-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white p-1.25 transition-all duration-300">
-            <!-- Full Image Area -->
-            <div
-              class="h-[180px] w-full overflow-hidden rounded-[18px] sm:h-[220px] md:h-[240px] lg:h-[200px]">
-              <img src="assets/images/service-aeo.webp" alt="AEO"
-                class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
-            </div>
-
-            <!-- Card Text -->
-            <div class="px-4 py-6 sm:px-5 sm:py-7 md:px-6 md:py-8">
-              <div
-                class="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 md:gap-4">
-                <!-- Title -->
-                <h3
-                  class="font-manrope text-[26px] font-bold leading-[130%] text-black sm:text-[30px] md:text-[34px] lg:text-[36px]">
-                  AEO · GEO · LLMO
-                </h3>
-
-                <!-- Badge -->
-
-              </div>
-
-              <!-- Description -->
-              <p
-                class="mt-3 max-w-full font-manrope text-sm font-normal leading-[140%] text-[#373737] sm:mt-4 sm:text-base md:text-lg md:leading-[130%]">
-                AI Overviews · Featured snippets · ChatGPT · Gemini · Perplexity
-              </p>
-            </div>
+          <!-- Joining Element (Visible on Desktop Grid) -->
+          <div class="process-connector block lg:block">
+            <img src="assets/images/process-inner-join.svg" alt="Connector" class="h-auto w-auto object-contain" />
           </div>
         </div>
 
+        <!-- STEP 02 -->
+        <div
+          class="process-card relative flex flex-col justify-between rounded-2xl sm:rounded-3xl md:rounded-[28px] lg:rounded-[36px] px-5 py-6 transition-transform duration-300  sm:px-6 sm:py-7  lg:px-6 lg:py-8">
+          <div>
+            <!-- Process number svg -->
+            <img src="assets/images/process-number-02.svg" alt="02"
+              class="process-number block h-14 w-22.5 select-none object-contain sm:h-16 sm:w-25 lg:h-18 lg:w-27.5" />
 
-<!-- Load More / CTA Button -->
-<div class="mt-10 flex justify-center md:mt-12">
-  <a
-    href=""
-    class="rounded-full bg-[#523EC5] px-6 py-4 font-manrope text-base font-medium leading-[120%] text-white transition-all duration-300 hover:bg-[#432FB0]  sm:text-lg md:text-xl"
-  >
-    See full service details
-  </a>
-</div>
+            <!-- Card title -->
+            <h3
+              class="mt-4 font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-white sm:mt-5">
+              Strategy
+            </h3>
+
+            <!-- Card paragraph -->
+            <p
+              class="mt-3 font-manrope text-sm sm:text-base md:text-lg font-normal leading-[140%] text-white opacity-[0.6] sm:mt-4  sm:leading-[130%]">
+              Full audit + 90-day platform-specific roadmap.
+            </p>
+          </div>
+
+          <!-- Joining Element (Visible on Desktop Grid) -->
+          <div class="process-connector block lg:block">
+            <img src="assets/images/process-inner-join.svg" alt="Connector" class="h-auto w-auto object-contain" />
+          </div>
+        </div>
+
+        <!-- STEP 03 -->
+        <div
+          class="process-card relative flex flex-col justify-between rounded-2xl sm:rounded-3xl md:rounded-[28px] lg:rounded-[36px] px-5 py-6 transition-transform duration-300  sm:px-6 sm:py-7  lg:px-6 lg:py-8">
+          <div>
+            <!-- Process number svg -->
+            <img src="assets/images/process-number-03.svg" alt="03"
+              class="process-number block h-14 w-22.5 select-none object-contain sm:h-16 sm:w-25 lg:h-18 lg:w-27.5" />
+
+            <!-- Card title -->
+            <h3
+              class="mt-4 font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-white sm:mt-5">
+              Execute
+            </h3>
+
+            <!-- Card paragraph -->
+            <p
+              class="mt-3 font-manrope text-sm sm:text-base md:text-lg font-normal leading-[140%] text-white opacity-[0.6] sm:mt-4  sm:leading-[130%]">
+              Technical → On-page → AI SEO. Each phase compounds the last.
+            </p>
+          </div>
+
+          <!-- Joining Element (Visible on Desktop Grid) -->
+          <div class="process-connector block lg:block">
+            <img src="assets/images/process-inner-join.svg" alt="Connector" class="h-auto w-auto object-contain" />
+          </div>
+        </div>
+
+        <!-- STEP 04 -->
+        <div
+          class="process-card relative flex flex-col justify-between rounded-2xl sm:rounded-3xl md:rounded-[28px] lg:rounded-[36px] px-5 py-6 transition-transform duration-300  sm:px-6 sm:py-7  lg:px-6 lg:py-8">
+          <div>
+            <!-- Process number svg -->
+            <img src="assets/images/process-number-04.svg" alt="04"
+              class="process-number block h-14 w-22.5 select-none object-contain sm:h-16 sm:w-25 lg:h-18 lg:w-27.5" />
+
+            <!-- Card title -->
+            <h3
+              class="mt-4 font-manrope text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-bold leading-[130%] text-white sm:mt-5">
+              Report
+            </h3>
+
+            <!-- Card paragraph -->
+            <p
+              class="mt-3 font-manrope text-sm sm:text-base md:text-lg font-normal leading-[140%] text-white opacity-[0.6] sm:mt-4  sm:leading-[130%]">
+              Monthly: traffic · rankings · CTR · AI citations. Milestone-based.
+            </p>
+          </div>
+
+          <!-- Joining Element (Visible on Desktop Grid) -->
+
+        </div>
+
       </div>
-    </section>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js">
+    </div>
+  </section>
+  <!-- How we work section ends -->
+
+  <!-- Recent project section start -->
+  <section class=" bg-white section-padding">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="mb-6 md:mb-8 lg:mb-12 flex flex-col items-center text-center">
+        <!-- Tag Pill -->
+        <span
+          class=" inline-flex items-center justify-center rounded-full border border-[#523EC5] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(82,62,197,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#523EC5] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
+          Recent results
+        </span>
+
+        <!-- Main Title -->
+        <h2
+          class="font-hegarty text-[#1C1C1C] text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
+          Selected works
+        </h2>
+      </div>
+
+      <!-- Cards Stack Container -->
+      <div class="flex flex-col gap-6">
+
+        <!-- ==================== CARD 1:==================== -->
+        <a href="#"
+          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          <!-- Image Area: 3 / 12 Columns -->
+          <div class="p-1.25 md:col-span-5 lg:col-span-3">
+            <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
+              <img src="assets/images/Recent-project-01.webp" alt="StyleVault Fashion"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+          </div>
+
+          <!-- Content Area: 9 / 12 Columns -->
+          <div class="flex flex-col justify-between p-6 md:col-span-7 lg:col-span-9 md:p-12">
+            <div>
+              <!-- Category -->
+              <span
+                class="font-manrope text-sm font-bold leading-[130%] text-[#696969] sm:text-base md:text-lg lg:text-xl">
+                Shopify SEO
+              </span>
+
+              <!-- Card Headline -->
+              <h3
+                class="mt-2 font-manrope text-xl font-bold leading-[130%] text-black sm:text-2xl md:mt-4 md:text-3xl lg:text-[36px]">
+                StyleVault Fashion — collection SEO + AEO · 4× organic traffic
+              </h3>
+
+              <!-- Meta Details -->
+              <div
+                class="mt-3 flex flex-wrap items-center font-manrope text-sm leading-[130%] text-[#373737] sm:text-base md:text-lg">
+                <!-- Industry -->
+                <span class="flex items-center gap-2 pr-4">
+                  <img src="assets/images/fashion-icon.svg" alt="Industry"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  Fashion
+                </span>
+
+                <!-- Location -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] px-4">
+                  <img src="assets/images/location-icon.svg" alt="Location"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  UK
+                </span>
+
+                <!-- Duration -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] pl-4">
+                  <img src="assets/images/calender-icon.svg" alt="Duration"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  5mo
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Metrics + Button -->
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <!-- Metric Pills -->
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  +310% traffic
+                </span>
+
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  4× revenue
+                </span>
+
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  AI Overview cited
+                </span>
+              </div>
+
+              <!-- View Button -->
+              <span
+                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
+                <span>View</span>
+
+                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ==================== CARD 2:==================== -->
+        <a href="#"
+          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          <!-- Image Area: 3 / 12 Columns -->
+          <div class="p-1.25 md:col-span-5 lg:col-span-3">
+            <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
+              <img src="assets/images/Recent-project-02.webp" alt="DataPipe SaaS"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+          </div>
+
+          <!-- Content Area: 9 / 12 Columns -->
+          <div class="flex flex-col justify-between p-6 md:col-span-7 lg:col-span-9 md:p-12">
+            <div>
+              <!-- Category -->
+              <span
+                class="font-manrope text-sm font-bold leading-[130%] text-[#696969] sm:text-base md:text-lg lg:text-xl">
+                Webflow SEO
+              </span>
+
+              <!-- Card Headline -->
+              <h3
+                class="mt-2 font-manrope text-xl font-bold leading-[130%] text-black sm:text-2xl md:mt-4 md:text-3xl lg:text-[36px]">
+                DataPipe SaaS — Webflow CMS SEO drives +280% blog traffic
+              </h3>
+
+              <!-- Meta Details -->
+              <div
+                class="mt-3 flex flex-wrap items-center font-manrope text-sm leading-[130%] text-[#373737] sm:text-base md:text-lg">
+                <!-- Industry -->
+                <span class="flex items-center gap-2 pr-4">
+                  <img src="assets/images/fashion-icon.svg" alt="Industry"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  SaaS
+                </span>
+
+                <!-- Location -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] px-4">
+                  <img src="assets/images/location-icon.svg" alt="Location"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  USA
+                </span>
+
+                <!-- Duration -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] pl-4">
+                  <img src="assets/images/calender-icon.svg" alt="Duration"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  4mo
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Metrics + Button -->
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <!-- Metric Pills -->
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  +280% traffic
+                </span>
+
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  8 LLM citations
+                </span>
+              </div>
+
+              <!-- View Button -->
+              <span
+                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
+                <span>View</span>
+
+                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ==================== CARD 3:==================== -->
+        <a href="#"
+          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          <!-- Image Area: 3 / 12 Columns -->
+          <div class="p-1.25 md:col-span-5 lg:col-span-3">
+            <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
+              <img src="assets/images/Recent-project-03.webp" alt="NutriCore"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+          </div>
+
+          <!-- Content Area: 9 / 12 Columns -->
+          <div class="flex flex-col justify-between p-6 md:col-span-7 lg:col-span-9 md:p-12">
+            <div>
+              <!-- Category -->
+              <span
+                class="font-manrope text-sm font-bold leading-[130%] text-[#696969] sm:text-base md:text-lg lg:text-xl">
+                LLMO
+              </span>
+
+              <!-- Card Headline -->
+              <h3
+                class="mt-2 font-manrope text-xl font-bold leading-[130%] text-black sm:text-2xl md:mt-4 md:text-3xl lg:text-[36px]">
+                NutriCore — 14 AI Overview positions for supplement queries
+              </h3>
+
+              <!-- Meta Details -->
+              <div
+                class="mt-3 flex flex-wrap items-center font-manrope text-sm leading-[130%] text-[#373737] sm:text-base md:text-lg">
+                <!-- Industry -->
+                <span class="flex items-center gap-2 pr-4">
+                  <img src="assets/images/fashion-icon.svg" alt="Industry"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  Health
+                </span>
+
+                <!-- Location -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] px-4">
+                  <img src="assets/images/location-icon.svg" alt="Location"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  AU
+                </span>
+
+                <!-- Duration -->
+                <span class="flex items-center gap-1.5 border-l border-[#B9B9B9] pl-4">
+                  <img src="assets/images/calender-icon.svg" alt="Duration"
+                    class="h-4 w-4 object-contain sm:h-5.5 sm:w-5.5" />
+                  3mo
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Metrics + Button -->
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <!-- Metric Pills -->
+              <div class="flex flex-wrap items-center gap-2">
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  14 AI Overviews
+                </span>
+
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  ChatGPT cited
+                </span>
+
+                <span
+                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                  +190% organic
+                </span>
+              </div>
+
+              <!-- View Button -->
+              <span
+                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
+                <span>View</span>
+
+                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- Recent project section ends -->
+
+
+  <!-- Testimonial section starts -->
+  <section class="bg-[#F3F3F3] section-padding mx-5 rounded-2xl sm:rounded-4xl md:rounded-[50px] lg:rounded-[64px]">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="mb-6 md:mb-8 lg:mb-12 flex flex-col items-center text-center">
+        <!-- Tag Pill -->
+        <span
+          class=" inline-flex items-center justify-center rounded-full border border-[#523EC5] px-3 md:px-6 py-1.5 md:py-3 bg-[rgba(82,62,197,0.05)] backdrop-blur-[3.5px] font-manrope  text-[#523EC5] text-xs md:text-sm lg:text-base font-semibold leading-[125%] mb-3 md:mb-6">
+          Testimonial
+        </span>
+
+        <!-- Main Title -->
+        <h2
+          class="font-hegarty text-[#1C1C1C] text-[30px] md:text-[48px] lg:text-[64px] font-normal leading-[100%] tracking-[1.28px]">
+          Testimonial
+        </h2>
+      </div>
+
+      <!-- Testimonial Slider -->
+      <div id="testimonial-slider" class="splide" aria-label="Testimonials">
+        <div class="splide__track">
+          <ul class="splide__list">
+
+            <!-- Testimonial card 1 -->
+            <li class="splide__slide">
+              <div
+                class="flex min-h-60 flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:min-h-80 lg:min-h-91.25 lg:p-8">
+                <!-- Top Content -->
+                <div>
+                  <!-- Top Row: Rating Stars + Upwork Logo -->
+                  <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Rating Stars -->
+                    <ul class="flex gap-0.5">
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                    </ul>
+
+                    <span class="font-urbanist text-base font-bold leading-[150%] text-[#433F34] sm:text-lg">
+                      5.0
+                    </span>
+
+                    <!-- Upwork Logo -->
+                    <img src="assets/images/testimonial-upwork.svg" alt="Upwork"
+                      class="w-20 select-none object-contain sm:w-24 lg:w-auto" />
+                  </div>
+
+                  <!-- Review Text -->
+                  <p
+                    class="mt-4 font-manrope text-base md:text-lg font-bold leading-[130%] text-[#1C1C1C] sm:mt-5 sm:text-xl lg:mt-6 lg:text-[22px]">
+                    180+ new keyword rankings, Google AI Overviews, and ChatGPT
+                    citations in 5 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="mt-auto flex items-end justify-between pt-8 sm:pt-10 lg:pt-12">
+                  <!-- Author Profile -->
+                  <div class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5">
+                    <img src="assets/images/testimonial-client-01.png" alt="James Morton"
+                      class="h-12 w-12 shrink-0 rounded-full object-cover select-none sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+
+                    <div class="flex flex-col">
+                      <h4 class="font-manrope text-base font-bold leading-[130%] text-[#161615] sm:text-lg">
+                        James Morton
+                      </h4>
+
+                      <p class="font-manrope text-sm font-medium leading-[150%] text-[#433F34] sm:text-base">
+                        StyleVault Fashion · UK
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Quotation Icon -->
+                  <img src="assets/images/testimonial-quote.svg" alt="Quote"
+                    class="w-10 select-none object-contain sm:w-12 lg:w-16" />
+                </div>
+              </div>
+            </li>
+
+            <!-- Testimonial card 2 -->
+            <li class="splide__slide">
+              <div
+                class="flex min-h-60 flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:min-h-80 lg:min-h-91.25 lg:p-8">
+                <!-- Top Content -->
+                <div>
+                  <!-- Top Row: Rating Stars + Upwork Logo -->
+                  <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Rating Stars -->
+                    <ul class="flex gap-0.5">
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                    </ul>
+
+                    <span class="font-urbanist text-base font-bold leading-[150%] text-[#433F34] sm:text-lg">
+                      5.0
+                    </span>
+
+                    <!-- Upwork Logo -->
+                    <img src="assets/images/testimonial-upwork.svg" alt="Upwork"
+                      class="w-20 select-none object-contain sm:w-24 lg:w-auto" />
+                  </div>
+
+                  <!-- Review Text -->
+                  <p
+                    class="mt-4 font-manrope text-base md:text-lg font-bold leading-[130%] text-[#1C1C1C] sm:mt-5 sm:text-xl lg:mt-6 lg:text-[22px]">
+                    180+ new keyword rankings, Google AI Overviews, and ChatGPT
+                    citations in 5 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="mt-auto flex items-end justify-between pt-8 sm:pt-10 lg:pt-12">
+                  <!-- Author Profile -->
+                  <div class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5">
+                    <img src="assets/images/testimonial-client-01.png" alt="James Morton"
+                      class="h-12 w-12 shrink-0 rounded-full object-cover select-none sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+
+                    <div class="flex flex-col">
+                      <h4 class="font-manrope text-base font-bold leading-[130%] text-[#161615] sm:text-lg">
+                        James Morton
+                      </h4>
+
+                      <p class="font-manrope text-sm font-medium leading-[150%] text-[#433F34] sm:text-base">
+                        StyleVault Fashion · UK
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Quotation Icon -->
+                  <img src="assets/images/testimonial-quote.svg" alt="Quote"
+                    class="w-10 select-none object-contain sm:w-12 lg:w-16" />
+                </div>
+              </div>
+            </li>
+
+            <!-- Testimonial card 3 -->
+            <li class="splide__slide">
+              <div
+                class="flex min-h-60 flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:min-h-80 lg:min-h-91.25 lg:p-8">
+                <!-- Top Content -->
+                <div>
+                  <!-- Top Row: Rating Stars + Upwork Logo -->
+                  <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Rating Stars -->
+                    <ul class="flex gap-0.5">
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                    </ul>
+
+                    <span class="font-urbanist text-base font-bold leading-[150%] text-[#433F34] sm:text-lg">
+                      5.0
+                    </span>
+
+                    <!-- Upwork Logo -->
+                    <img src="assets/images/testimonial-upwork.svg" alt="Upwork"
+                      class="w-20 select-none object-contain sm:w-24 lg:w-auto" />
+                  </div>
+
+                  <!-- Review Text -->
+                  <p
+                    class="mt-4 font-manrope text-base md:text-lg font-bold leading-[130%] text-[#1C1C1C] sm:mt-5 sm:text-xl lg:mt-6 lg:text-[22px]">
+                    180+ new keyword rankings, Google AI Overviews, and ChatGPT
+                    citations in 5 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="mt-auto flex items-end justify-between pt-8 sm:pt-10 lg:pt-12">
+                  <!-- Author Profile -->
+                  <div class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5">
+                    <img src="assets/images/testimonial-client-01.png" alt="James Morton"
+                      class="h-12 w-12 shrink-0 rounded-full object-cover select-none sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+
+                    <div class="flex flex-col">
+                      <h4 class="font-manrope text-base font-bold leading-[130%] text-[#161615] sm:text-lg">
+                        James Morton
+                      </h4>
+
+                      <p class="font-manrope text-sm font-medium leading-[150%] text-[#433F34] sm:text-base">
+                        StyleVault Fashion · UK
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Quotation Icon -->
+                  <img src="assets/images/testimonial-quote.svg" alt="Quote"
+                    class="w-10 select-none object-contain sm:w-12 lg:w-16" />
+                </div>
+              </div>
+            </li>
+
+            <!-- Testimonial card 4 -->
+            <li class="splide__slide">
+              <div
+                class="flex min-h-60 flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:min-h-80 lg:min-h-91.25 lg:p-8">
+                <!-- Top Content -->
+                <div>
+                  <!-- Top Row: Rating Stars + Upwork Logo -->
+                  <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Rating Stars -->
+                    <ul class="flex gap-0.5">
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                    </ul>
+
+                    <span class="font-urbanist text-base font-bold leading-[150%] text-[#433F34] sm:text-lg">
+                      5.0
+                    </span>
+
+                    <!-- Upwork Logo -->
+                    <img src="assets/images/testimonial-upwork.svg" alt="Upwork"
+                      class="w-20 select-none object-contain sm:w-24 lg:w-auto" />
+                  </div>
+
+                  <!-- Review Text -->
+                  <p
+                    class="mt-4 font-manrope text-base md:text-lg font-bold leading-[130%] text-[#1C1C1C] sm:mt-5 sm:text-xl lg:mt-6 lg:text-[22px]">
+                    180+ new keyword rankings, Google AI Overviews, and ChatGPT
+                    citations in 5 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="mt-auto flex items-end justify-between pt-8 sm:pt-10 lg:pt-12">
+                  <!-- Author Profile -->
+                  <div class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5">
+                    <img src="assets/images/testimonial-client-01.png" alt="James Morton"
+                      class="h-12 w-12 shrink-0 rounded-full object-cover select-none sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+
+                    <div class="flex flex-col">
+                      <h4 class="font-manrope text-base font-bold leading-[130%] text-[#161615] sm:text-lg">
+                        James Morton
+                      </h4>
+
+                      <p class="font-manrope text-sm font-medium leading-[150%] text-[#433F34] sm:text-base">
+                        StyleVault Fashion · UK
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Quotation Icon -->
+                  <img src="assets/images/testimonial-quote.svg" alt="Quote"
+                    class="w-10 select-none object-contain sm:w-12 lg:w-16" />
+                </div>
+              </div>
+            </li>
+
+            <!-- Testimonial card 5 -->
+            <li class="splide__slide">
+              <div
+                class="flex min-h-60 flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:min-h-80 lg:min-h-91.25 lg:p-8">
+                <!-- Top Content -->
+                <div>
+                  <!-- Top Row: Rating Stars + Upwork Logo -->
+                  <div class="flex items-center gap-2 sm:gap-3">
+                    <!-- Rating Stars -->
+                    <ul class="flex gap-0.5">
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                      <li>
+                        <img src="assets/images/rating-star.svg" alt="5 Star Rating"
+                          class="h-5 w-5 select-none object-contain sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                      </li>
+                    </ul>
+
+                    <span class="font-urbanist text-base font-bold leading-[150%] text-[#433F34] sm:text-lg">
+                      5.0
+                    </span>
+
+                    <!-- Upwork Logo -->
+                    <img src="assets/images/testimonial-upwork.svg" alt="Upwork"
+                      class="w-20 select-none object-contain sm:w-24 lg:w-auto" />
+                  </div>
+
+                  <!-- Review Text -->
+                  <p
+                    class="mt-4 font-manrope text-base md:text-lg font-bold leading-[130%] text-[#1C1C1C] sm:mt-5 sm:text-xl lg:mt-6 lg:text-[22px]">
+                    180+ new keyword rankings, Google AI Overviews, and ChatGPT
+                    citations in 5 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Row -->
+                <div class="mt-auto flex items-end justify-between pt-8 sm:pt-10 lg:pt-12">
+                  <!-- Author Profile -->
+                  <div class="flex items-center gap-2.5 sm:gap-3 lg:gap-3.5">
+                    <img src="assets/images/testimonial-client-01.png" alt="James Morton"
+                      class="h-12 w-12 shrink-0 rounded-full object-cover select-none sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+
+                    <div class="flex flex-col">
+                      <h4 class="font-manrope text-base font-bold leading-[130%] text-[#161615] sm:text-lg">
+                        James Morton
+                      </h4>
+
+                      <p class="font-manrope text-sm font-medium leading-[150%] text-[#433F34] sm:text-base">
+                        StyleVault Fashion · UK
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Quotation Icon -->
+                  <img src="assets/images/testimonial-quote.svg" alt="Quote"
+                    class="w-10 select-none object-contain sm:w-12 lg:w-16" />
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Slider Indicator Dots -->
+        <div class="flex items-center justify-center gap-2" id="testimonial-dots">
+          <!-- Generated by Splide -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Testimonial section ends -->
+
+
+<!-- CTA & Footer Wrapper -->
+<div class="relative w-full bg-white">
+
+  <!-- CTA Section (Overlapping) -->
+  <section class="relative z-20 bg-transparent section-padding -mb-32 sm:-mb-48 md:-mb-56 lg:-mb-64">
+    <div class="container mx-auto px-4">
+
+      <!-- CTA Card -->
+      <div
+        class="relative flex min-h-55 w-full flex-col items-center justify-start overflow-hidden rounded-[28px] bg-cover bg-center bg-no-repeat p-5 text-center ring-4 ring-white shadow-2xl sm:min-h-120 sm:rounded-[36px] sm:p-8 md:min-h-140 md:rounded-[48px] md:p-12 lg:min-h-160 lg:p-16"
+        style="background-image: url('assets/images/cta-banner.webp');"
+      >
+
+        <!-- Bubbles -->
+        <div
+          id="cta-bubbles"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex w-full select-none justify-center overflow-hidden"
+        >
+          <img
+            src="assets/images/Cta-bubbles.webp"
+            alt=""
+            class="block h-auto w-[140%] max-w-none sm:w-[120%] md:w-full"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          class="relative z-10 flex w-full max-w-236 flex-col items-center gap-4 pt-4 sm:gap-5 sm:pt-8 md:gap-6 md:pt-10"
+        >
+
+          <!-- Heading -->
+          <h2
+            class="font-hegarty w-full text-[30px] font-normal leading-[105%] tracking-[0.5px] text-white sm:max-w-175 sm:text-[40px] sm:tracking-[0.8px] md:max-w-212.5 md:text-[48px] lg:max-w-236 lg:text-[64px] lg:tracking-[1.28px]"
+          >
+            Ready to rank on Google and get cited by AI?
+          </h2>
+
+          <!-- Subtitle -->
+          <p
+            class="font-manrope max-w-[320px] text-base font-normal leading-[135%] text-white sm:max-w-none sm:text-lg md:text-xl md:leading-[130%]"
+          >
+            Free 30-min audit · Upwork escrow · 24hr response
+          </p>
+
+          <!-- CTA Button -->
+          <div class="mt-2 sm:mt-4">
+            <a
+              href="#audit"
+              class="font-manrope inline-flex items-center justify-center gap-2 rounded-full bg-[#F36D04] px-6 py-3 text-base font-medium leading-[120%] text-white transition-all duration-300 hover:scale-105 hover:bg-[#e06200] sm:gap-2.5 sm:px-8 sm:py-3.5 sm:text-lg md:px-10 md:py-4 md:text-xl"
+            >
+              <span>Book a free audit</span>
+
+              <!-- Arrow -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="h-5 w-5 sm:h-6 sm:w-6"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer 
+    class="relative z-10 w-full bg-[#030308] bg-cover bg-center bg-no-repeat pt-44 sm:pt-64 md:pt-72 lg:pt-80 text-white"
+    style="background-image: url('assets/images/footer-background.png'); background-size: cover; background-position-y: bottom;"
+  >
+
+  <!-- Background Shade -->
+  <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+    <img
+      src="assets/images/footer-bg-shade.png"
+      alt=""
+      class="absolute bottom-0 left-1/2 h-full w-full min-w-[900px] -translate-x-1/2 object-cover object-center opacity-100"
+    />
+  </div>
+    <div class="container mx-auto px-4 md:px-8">
+      
+      <!-- 12-Column Grid Container -->
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
+
+        <!-- ==================== LEFT COLUMN (5 GRIDS) ==================== -->
+        <div class="relative flex flex-col items-start lg:col-span-5">
+          
+          <!-- Name Heading -->
+          <h3 class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
+            Rezaul Karim
+          </h3>
+
+          <!-- Description -->
+          <p class="mt-3 max-w-sm font-manrope text-sm font-normal leading-relaxed text-[#9898A0] sm:text-base">
+            5yr agency SEO · 120+ projects · Available globally via Upwork.
+          </p>
+
+          <!-- Shadow / Watermark Image + Upwork Pill Container -->
+          <div class="relative mt-6 min-h-[120px] w-full max-w-[340px]">
+            
+            <!-- "REZAUL" Shadow/Watermark Image -->
+            <img 
+              src="assets/images/footer-Rezaul.png" 
+              alt="Rezaul Watermark" 
+              class="pointer-events-none select-none object-contain"
+            />
+
+            <!-- Overlaid "Hire me on Upwork" Pill Badge -->
+            <a 
+              href="#upwork" 
+              class="absolute bottom-2 left-0 inline-flex items-center gap-1.5 rounded-full bg-[#523EC5] p-1.5 pl-5 transition-transform duration-300 hover:scale-105"
+            >
+              <span class="font-manrope text-xs font-semibold text-white sm:text-sm">
+                Hire me on Upwork
+              </span>
+              <!-- Upwork Green Badge Circle -->
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#14A800]">
+                <span class="font-manrope text-xs font-bold text-white">up</span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- ==================== RIGHT COLUMN (7 GRIDS) ==================== -->
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
+
+          <!-- Column 1: Services -->
+          <div class="flex flex-col gap-3">
+            <h4 class="font-manrope text-base font-bold text-white">
+              Services
+            </h4>
+            <ul class="flex flex-col gap-2.5 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
+              <li><a href="#shopify" class="transition-colors hover:text-white">Shopify SEO</a></li>
+              <li><a href="#webflow" class="transition-colors hover:text-white">Webflow SEO</a></li>
+              <li><a href="#wordpress" class="transition-colors hover:text-white">WordPress SEO</a></li>
+              <li><a href="#wix" class="transition-colors hover:text-white">Wix SEO</a></li>
+              <li><a href="#technical" class="transition-colors hover:text-white">Technical SEO</a></li>
+              <li><a href="#onpage" class="transition-colors hover:text-white">On-Page SEO</a></li>
+              <li><a href="#aeo" class="transition-colors hover:text-white">AEO · GEO · LLMO</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Pages -->
+          <div class="flex flex-col gap-3">
+            <h4 class="font-manrope text-base font-bold text-white">
+              Pages
+            </h4>
+            <ul class="flex flex-col gap-2.5 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
+              <li><a href="#home" class="transition-colors hover:text-white">Home</a></li>
+              <li><a href="#services" class="transition-colors hover:text-white">Services</a></li>
+              <li><a href="#works" class="transition-colors hover:text-white">My Works</a></li>
+              <li><a href="#about" class="transition-colors hover:text-white">About Me</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Connect -->
+          <div class="col-span-2 flex flex-col gap-3 sm:col-span-1">
+            <h4 class="font-manrope text-base font-bold text-white">
+              Connect
+            </h4>
+            <div class="flex flex-col gap-2 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
+              <a href="#upwork-profile" class="inline-flex items-center gap-1.5 font-semibold text-white hover:underline">
+                <span class="text-[#14A800]">up</span>
+                <span>★ Upwork profile</span>
+              </a>
+              <p class="mt-1 text-[#9898A0]">
+                All inquiries via Upwork
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Links Row (Privacy / Terms) -->
+      <div class="mt-16 flex items-center justify-end gap-6 pb-16 font-manrope text-xs font-medium text-[#9898A0]">
+        <a href="#privacy" class="transition-colors hover:text-white">Privacy</a>
+        <a href="#terms" class="transition-colors hover:text-white">Terms</a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Centered Copyright White Shape Tab -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2">
+      <div class="flex items-center justify-center rounded-t-2xl bg-white px-8 py-2.5 shadow-lg md:px-12 md:py-3">
+        <span class="whitespace-nowrap font-manrope text-xs font-bold text-[#1C1C1C] sm:text-sm">
+          © 2026 Rezaul Karim
+        </span>
+      </div>
+    </div>
+
+  </footer>
+
+</div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js">
   </script>
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 
-  </body>
+</body>
 
 </html>

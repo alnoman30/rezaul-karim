@@ -621,3 +621,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+// Testimonial slider js
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#testimonial-slider", {
+    type: "loop",
+
+    perPage: 3,
+    perMove: 1,
+    gap: "24px",
+
+    arrows: false,
+    pagination: true,
+
+    drag: true,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+
+    autoScroll: {
+      speed: 1,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+    },
+
+    breakpoints: {
+      1023: {
+        perPage: 2,
+        gap: "20px",
+      },
+
+      767: {
+        perPage: 1,
+        gap: "16px",
+
+        // Stop auto-scroll on mobile
+        autoScroll: false,
+      },
+    },
+  }).mount(window.splide.Extensions);
+});

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Bebas+Neue&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 @font-face {
-    font-family: 'Agency';
-    src: url('../font/AgencyRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Agency';
+  src: url('../font/AgencyRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -38,6 +38,10 @@
 
 .font-agency {
   font-family: 'Agency';
+}
+
+.font-urbanist {
+  font-family: "Urbanist", sans-serif;
 }
 
 /* Gradient overlay style */
@@ -77,13 +81,13 @@ html {
 
 
 body {
-font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: #FFF;
 }
 
 html {
   scroll-behavior: smooth;
-font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 
@@ -158,117 +162,118 @@ table {
 
 html.lenis,
 html.lenis body {
-    height: auto;
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 
 /* MHeading navigation bar css */
-    #main-header {
-      transition:
-        background-color 0.4s ease,
-        backdrop-filter 0.4s ease,
-        box-shadow 0.4s ease;
-    }
+#main-header {
+  transition:
+    background-color 0.4s ease,
+    backdrop-filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
 
-    #navPillWrap {
-      position: relative;
-    }
+#navPillWrap {
+  position: relative;
+}
 
-    .progress-ring {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
 
-    /* Mobile Menu Drawer Animation */
-    #mobile-menu {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transform: translateY(-20px);
-      transition:
-        opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-        visibility 0.3s ease;
-    }
+/* Mobile Menu Drawer Animation */
+#mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition:
+    opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.3s ease;
+}
 
-    #mobile-menu.is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
+#mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 
-    body.menu-open {
-      overflow: hidden;
-    }
+body.menu-open {
+  overflow: hidden;
+}
 
-    .mobile-link {
-      opacity: 0;
-      transform: translateY(15px);
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-    }
+.mobile-link {
+  opacity: 0;
+  transform: translateY(15px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
 
-    #mobile-menu.is-open .mobile-link {
-      opacity: 1;
-      transform: translateY(0);
-    }
+#mobile-menu.is-open .mobile-link {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* Animated Hamburger Icon */
-    #mobile-menu-toggle .line-1,
-    #mobile-menu-toggle .line-2 {
-      transition: transform 0.3s ease;
-    }
+/* Animated Hamburger Icon */
+#mobile-menu-toggle .line-1,
+#mobile-menu-toggle .line-2 {
+  transition: transform 0.3s ease;
+}
 
-    #mobile-menu-toggle.is-open .line-1 {
-      transform: translateY(4px) rotate(45deg);
-    }
+#mobile-menu-toggle.is-open .line-1 {
+  transform: translateY(4px) rotate(45deg);
+}
 
-    #mobile-menu-toggle.is-open .line-2 {
-      transform: translateY(-4px) rotate(-45deg);
-    }
+#mobile-menu-toggle.is-open .line-2 {
+  transform: translateY(-4px) rotate(-45deg);
+}
 
-    @media (max-width: 1023.98px) {
-      #main-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: transparent;
-        backdrop-filter: blur(0);
-        -webkit-backdrop-filter: blur(0);
-        box-shadow: none;
-      }
+@media (max-width: 1023.98px) {
+  #main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    box-shadow: none;
+  }
 
-      #main-header.mobile-scrolled {
-        background: rgba(10, 10, 13, 0.90);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-      }
+  #main-header.mobile-scrolled {
+    background: rgba(10, 10, 13, 0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
 
-      #navPillWrap {
-        display: none;
-      }
-    }
+  #navPillWrap {
+    display: none;
+  }
+}
+
 .active {
   background-color: #523EC5;
   color: white;
@@ -277,7 +282,7 @@ html.lenis body {
 
 
 /* Hero section css */
-.hero-section{
+.hero-section {
   background-image: url(../images/background-new.webp);
   background-position: center;
   background-size: cover;
@@ -310,13 +315,11 @@ html.lenis body {
   border-radius: inherit;
   padding: 2px;
 
-  background: conic-gradient(
-    from var(--card-angle),
-    transparent 0%,
-    #F36D04 8%,
-    #523EC5 14%,
-    transparent 22%
-  );
+  background: conic-gradient(from var(--card-angle),
+      transparent 0%,
+      #F36D04 8%,
+      #523EC5 14%,
+      transparent 22%);
 
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
@@ -351,6 +354,7 @@ html.lenis body {
 
 
 
+
 /* Optional image/logo animation */
 .service-card img {
   transition:
@@ -360,4 +364,134 @@ html.lenis body {
 
 .service-card:hover img {
   transform: scale(1.06);
+}
+
+
+
+/* Experience card */
+.experience-card {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* Conic-gradient Border Setup using Masking */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 3px;
+  /* Border thickness */
+
+  background: conic-gradient(from var(--card-angle),
+      transparent 0%,
+      #F36D04 8%,
+      #523EC5 14%,
+      transparent 22%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  animation: card-border-spin 3.5s linear infinite;
+  animation-play-state: paused;
+}
+
+/* Card 1: Active by default (glowing border spins continuously) */
+.experience-card-active::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Card 2: Activates glowing border, gradient background, and shadow on hover */
+.experience-card-hover:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.experience-card-hover:hover {
+  background: linear-gradient(132deg, #FFF 80.61%, #FFB880 97.87%) !important;
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* How we work section css */
+/* Outlined Big Number Styling */
+.process-number {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  color: #BCB1FF;
+}
+
+/* Glassmorphism Card Style */
+.process-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+/* Card Joiner Image / Line Container */
+.process-connector {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 1023px) {
+  .process-connector {
+    top: auto;
+    right: auto;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .process-connector {
+    top: 20%;
+    right: -24px;
+    transform: translateY(-50%);
+  }
+}
+
+
+/* Testimonial slider css */
+#testimonial-slider .splide__pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#testimonial-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 9999px;
+  background: white;
+  opacity: 1;
+  transform: none;
+}
+
+#testimonial-slider .splide__pagination__page.is-active {
+  width: 28px;
+  height: 10px;
+  background: #523EC5;
+  opacity: 1;
+  transform: none;
 }
