@@ -13,86 +13,103 @@
 <body class="bg-[#]">
 
   <!-- Desktop & Mobile Header start -->
-  <header id="main-header" class="fixed left-0 top-0 z-50 w-full  lg:pt-8 ">
-    <div class="container flex w-full items-center justify-between gap-4">
+  <header id="main-header">
+    <div class="header-container">
 
       <!-- 1. Logo -->
-      <div id="desktop-logo" class="shrink-0">
-        <a href="#"
-          class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
+      <div id="desktop-logo">
+        <a href="#" class="logo-text">
           Rezaul Karim
         </a>
       </div>
 
+
       <!-- 2. Centered Navigation (Desktop) -->
-      <div id="navPillWrap" class="hidden lg:flex items-center justify-center">
-        <nav id="desktop-nav"
-          class="flex items-center rounded-full border border-white/10 bg-white/5 p-1.5 backdrop-blur-md  gap-4 xl:gap-12">
-          <a href="#"
-            class="nav-item active rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+      <div id="navPillWrap">
+        <nav id="desktop-nav">
+
+          <a href="#" class="nav-item active">
             Home
           </a>
 
-          <div
-            class="nav-item group relative flex cursor-pointer items-center gap-1.5 rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+
+          <div class="nav-item services-dropdown">
             <span>Services</span>
-            <svg class="h-4 w-4 fill-current transition-transform duration-300 group-hover:rotate-180"
-              viewBox="0 0 20 20">
+
+            <svg class="services-arrow" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M10 13.334L5 8.33398H15L10 13.334Z" />
             </svg>
           </div>
 
-          <a href="#"
-            class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+
+          <a href="#" class="nav-item">
             My Works
           </a>
 
-          <a href="#"
-            class="nav-item rounded-full px-6 py-3 font-manrope text-lg xl:text-xl font-medium leading-[120%] tracking-[-1px] text-white transition-all duration-300 hover:bg-[#523EC5] hover:text-white hover:shadow-[0_0_20px_rgba(82,62,197,0.4)]">
+
+          <a href="#" class="nav-item">
             About
           </a>
+
         </nav>
       </div>
 
+
       <!-- 3. Right Action / Mobile Toggle -->
-      <div class="flex items-center shrink-0">
-        <a id="desktop-cta" href="#"
-          class="hidden rounded-full bg-[#F36D04] px-6 py-2.5 font-manrope text-xl font-medium text-white hover:brightness-125 transition-all duration-500 lg:inline-flex">
+      <div class="header-actions">
+
+        <a id="desktop-cta" href="#">
           Hire Me
         </a>
 
-        <button id="mobile-menu-toggle" type="button" aria-label="Toggle Navigation" aria-expanded="false"
-          class="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md lg:hidden">
-          <span class="line-1 h-0.5 w-6 rounded-full bg-[#F36D04]"></span>
-          <span class="line-2 h-0.5 w-5 rounded-full bg-white"></span>
+
+        <button id="mobile-menu-toggle" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+
         </button>
+
       </div>
 
     </div>
   </header>
   <!-- Desktop & Mobile Header ends -->
 
+
   <!-- Mobile Fullscreen Overlay Navigation Start -->
-  <div id="mobile-menu"
-    class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0a0a0d]/95 backdrop-blur-xl lg:hidden">
-    <nav class="flex flex-col items-center gap-6 text-center">
-      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Home</a>
-      <a href="#"
-        class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">Services</a>
-      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">My
-        Works</a>
-      <a href="#" class="mobile-link font-agency text-4xl text-white transition-colors hover:text-[#523EC5]">About</a>
+  <div id="mobile-menu">
+
+    <nav class="mobile-nav">
+
+      <a href="#" class="mobile-link">
+        Home
+      </a>
+
+      <a href="#" class="mobile-link">
+        Services
+      </a>
+
+      <a href="#" class="mobile-link">
+        My Works
+      </a>
+
+      <a href="#" class="mobile-link">
+        About
+      </a>
+
     </nav>
 
-    <a href="#"
-      class="mobile-link mt-4 rounded-full bg-[#F36D04] px-10 py-3.5 font-manrope text-lg font-semibold text-white shadow-[0_0_20px_rgba(243,109,4,0.4)] transition hover:bg-[#E06000]">
+
+    <a href="#" class="mobile-cta mobile-link">
       Hire Me
     </a>
+
   </div>
-  <!-- Mobile Fullscreen Overlay Navigation Start -->
+  <!-- Mobile Fullscreen Overlay Navigation ends -->
 
   <!-- Hero section content start -->
-  <section id="hero-section"
+  <section id="hero-section" data-nav-theme="dark"
     class="parallax hero-section relative flex min-h-screen h-screen w-full flex-col justify-start lg:justify-end overflow-hidden bg-[#]  pt-28 pb-6 lg:pb-12 lg:pt-0">
 
     <!-- Radial Glow Ambient Gradient Layer -->
@@ -172,7 +189,7 @@
   <!-- Hero section content ends -->
 
   <!-- Marquee Section Start -->
-  <section class=" px-3 pt-4 pb-3 sm:px-4 sm:pt-5">
+  <section class=" px-3 pt-4 pb-3 sm:px-4 sm:pt-5" data-nav-theme="light">
     <div>
       <div
         class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-[60px] lg:py-[40px]">
@@ -263,7 +280,7 @@
   <!-- Marquee Section ends -->
 
   <!-- Statistic section start -->
-  <section class="pt-3.75 pb-7.5 md:pb-15 lg:pb-22.5">
+  <section class="pt-3.75 pb-7.5 md:pb-15 lg:pb-22.5" data-nav-theme="light">
     <div class="container">
 
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -352,7 +369,8 @@
   <!-- Statistic section ends -->
 
   <!-- Service Section Start -->
-  <section class="mx-2 lg:mx-5 rounded-xl sm:rounded-2xl lg:rounded-[36px] bg-[#F3F3F3] section-padding">
+  <section class="mx-2 lg:mx-5 rounded-xl sm:rounded-2xl lg:rounded-[36px] bg-[#F3F3F3] section-padding"
+    data-nav-theme="light">
 
     <div class="container">
 
@@ -662,7 +680,7 @@
   <!-- Service Section Ends -->
 
   <!-- Experience (Why coose me) section start  -->
-  <section class="bg-white section-padding ">
+  <section class="bg-white section-padding " data-nav-theme="light">
     <div class="container">
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-start">
 
@@ -794,7 +812,7 @@
 
   <!-- How we work section start -->
   <section class="relative  bg-[#121212] bg-cover bg-center bg-no-repeat section-padding overflow-hidden"
-    style="background-image: url('assets/images/proccess-grain-banner.webp');">
+    data-nav-theme="dark" style="background-image: url('assets/images/proccess-grain-banner.webp');">
     <!-- Purple Ellipse Background -->
     <div
       class="pointer-events-none absolute left-1/2 top-1/2 z-0 h-110 w-110 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#523EC5] opacity-70 blur-[292px]"
@@ -932,7 +950,7 @@
   <!-- How we work section ends -->
 
   <!-- Recent project section start -->
-  <section class=" bg-white section-padding">
+  <section class=" bg-white section-padding" data-nav-theme="light">
     <div class="container">
 
       <!-- Section Header -->
@@ -1205,7 +1223,8 @@
 
 
   <!-- Testimonial section starts -->
-  <section class="bg-[#F3F3F3] section-padding mx-5 rounded-2xl sm:rounded-4xl md:rounded-[50px] lg:rounded-[64px]">
+  <section class="bg-[#F3F3F3] section-padding mx-5 rounded-2xl sm:rounded-4xl md:rounded-[50px] lg:rounded-[64px]"
+    data-nav-theme="light">
     <div class="container">
 
       <!-- Section Header -->
@@ -1612,214 +1631,207 @@
   <!-- Testimonial section ends -->
 
 
-<!-- CTA & Footer Wrapper -->
-<div class="relative w-full bg-white">
+  <!-- CTA & Footer Wrapper -->
+  <div class="relative w-full bg-white">
 
-  <!-- CTA Section (Overlapping) -->
-  <section class="relative z-20 bg-transparent section-padding -mb-32 sm:-mb-48 md:-mb-56 lg:-mb-64">
-    <div class="container mx-auto px-4">
+    <!-- CTA Section (Overlapping) -->
+    <section class="relative z-20 bg-transparent section-padding -mb-32 sm:-mb-48 md:-mb-56 lg:-mb-84"
+      data-nav-theme="light">
+      <div class="container mx-auto px-4">
 
-      <!-- CTA Card -->
-      <div
-        class="relative flex min-h-55 w-full flex-col items-center justify-start overflow-hidden rounded-[28px] bg-cover bg-center bg-no-repeat p-5 text-center ring-4 ring-white shadow-2xl sm:min-h-120 sm:rounded-[36px] sm:p-8 md:min-h-140 md:rounded-[48px] md:p-12 lg:min-h-160 lg:p-16"
-        style="background-image: url('assets/images/cta-banner.webp');"
-      >
-
-        <!-- Bubbles -->
+        <!-- CTA Card -->
         <div
-          id="cta-bubbles"
-          class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex w-full select-none justify-center overflow-hidden"
-        >
-          <img
-            src="assets/images/Cta-bubbles.webp"
-            alt=""
-            class="block h-auto w-[140%] max-w-none sm:w-[120%] md:w-full"
-          />
-        </div>
+          class="relative flex min-h-55 w-full flex-col items-center justify-start overflow-hidden rounded-[28px] bg-cover bg-center bg-no-repeat p-5 text-center ring-4 ring-white  sm:min-h-120 sm:rounded-[36px] sm:p-8 md:min-h-140 md:rounded-[48px] md:p-12 lg:min-h-160 lg:p-16"
+          style="background-image: url('assets/images/cta-banner.webp');">
 
-        <!-- Content -->
-        <div
-          class="relative z-10 flex w-full max-w-236 flex-col items-center gap-4 pt-4 sm:gap-5 sm:pt-8 md:gap-6 md:pt-10"
-        >
-
-          <!-- Heading -->
-          <h2
-            class="font-hegarty w-full text-[30px] font-normal leading-[105%] tracking-[0.5px] text-white sm:max-w-175 sm:text-[40px] sm:tracking-[0.8px] md:max-w-212.5 md:text-[48px] lg:max-w-236 lg:text-[64px] lg:tracking-[1.28px]"
-          >
-            Ready to rank on Google and get cited by AI?
-          </h2>
-
-          <!-- Subtitle -->
-          <p
-            class="font-manrope max-w-[320px] text-base font-normal leading-[135%] text-white sm:max-w-none sm:text-lg md:text-xl md:leading-[130%]"
-          >
-            Free 30-min audit · Upwork escrow · 24hr response
-          </p>
-
-          <!-- CTA Button -->
-          <div class="mt-2 sm:mt-4">
-            <a
-              href="#audit"
-              class="font-manrope inline-flex items-center justify-center gap-2 rounded-full bg-[#F36D04] px-6 py-3 text-base font-medium leading-[120%] text-white transition-all duration-300 hover:scale-105 hover:bg-[#e06200] sm:gap-2.5 sm:px-8 sm:py-3.5 sm:text-lg md:px-10 md:py-4 md:text-xl"
-            >
-              <span>Book a free audit</span>
-
-              <!-- Arrow -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                class="h-5 w-5 sm:h-6 sm:w-6"
-              >
-                <path
-                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                  fill="white"
-                />
-              </svg>
-            </a>
+          <!-- Bubbles -->
+          <div id="cta-bubbles"
+            class="pointer-events-none absolute inset-x-0 bottom-0 z-0 flex w-full select-none justify-center overflow-hidden">
+            <img src="assets/images/Cta-bubbles.webp" alt=""
+              class="block h-auto w-[140%] max-w-none sm:w-[120%] md:w-full" />
           </div>
 
-        </div>
-      </div>
+          <!-- Content -->
+          <div
+            class="relative z-10 flex w-full max-w-236 flex-col items-center gap-4 pt-4 sm:gap-5 sm:pt-8 md:gap-6 md:pt-10">
 
-    </div>
-  </section>
+            <!-- Heading -->
+            <h2
+              class="font-hegarty w-full text-[30px] font-normal leading-[105%] tracking-[0.5px] text-white sm:max-w-175 sm:text-[40px] sm:tracking-[0.8px] md:max-w-212.5 md:text-[48px] lg:max-w-236 lg:text-[64px] lg:tracking-[1.28px]">
+              Ready to rank on Google and get cited by AI?
+            </h2>
 
+            <!-- Subtitle -->
+            <p
+              class="font-manrope max-w-[320px] text-base font-normal leading-[135%] text-white sm:max-w-none sm:text-lg md:text-xl md:leading-[130%]">
+              Free 30-min audit · Upwork escrow · 24hr response
+            </p>
 
-  <!-- Footer Section -->
-  <footer 
-    class="relative z-10 w-full bg-[#030308] bg-cover bg-center bg-no-repeat pt-44 sm:pt-64 md:pt-72 lg:pt-80 text-white"
-    style="background-image: url('assets/images/footer-background.png'); background-size: cover; background-position-y: bottom;"
-  >
+            <!-- CTA Button -->
+            <div class="mt-2 sm:mt-4">
+              <a href="#audit"
+                class="font-manrope inline-flex items-center justify-center gap-2 rounded-full bg-[#F36D04] px-6 py-3 text-base font-medium leading-[120%] text-white transition-all duration-300  hover:brightness-125 sm:gap-2.5 sm:px-8 sm:py-3.5 sm:text-lg md:px-10 md:py-4 md:text-xl">
+                <span>Book a free audit</span>
 
-  <!-- Background Shade -->
-  <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-    <img
-      src="assets/images/footer-bg-shade.png"
-      alt=""
-      class="absolute bottom-0 left-1/2 h-full w-full min-w-[900px] -translate-x-1/2 object-cover object-center opacity-100"
-    />
-  </div>
-    <div class="container mx-auto px-4 md:px-8">
-      
-      <!-- 12-Column Grid Container -->
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
-
-        <!-- ==================== LEFT COLUMN (5 GRIDS) ==================== -->
-        <div class="relative flex flex-col items-start lg:col-span-5">
-          
-          <!-- Name Heading -->
-          <h3 class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal leading-15.25 capitalize">
-            Rezaul Karim
-          </h3>
-
-          <!-- Description -->
-          <p class="mt-3 max-w-sm font-manrope text-sm font-normal leading-relaxed text-[#9898A0] sm:text-base">
-            5yr agency SEO · 120+ projects · Available globally via Upwork.
-          </p>
-
-          <!-- Shadow / Watermark Image + Upwork Pill Container -->
-          <div class="relative mt-6 min-h-[120px] w-full max-w-[340px]">
-            
-            <!-- "REZAUL" Shadow/Watermark Image -->
-            <img 
-              src="assets/images/footer-Rezaul.png" 
-              alt="Rezaul Watermark" 
-              class="pointer-events-none select-none object-contain"
-            />
-
-            <!-- Overlaid "Hire me on Upwork" Pill Badge -->
-            <a 
-              href="#upwork" 
-              class="absolute bottom-2 left-0 inline-flex items-center gap-1.5 rounded-full bg-[#523EC5] p-1.5 pl-5 transition-transform duration-300 hover:scale-105"
-            >
-              <span class="font-manrope text-xs font-semibold text-white sm:text-sm">
-                Hire me on Upwork
-              </span>
-              <!-- Upwork Green Badge Circle -->
-              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#14A800]">
-                <span class="font-manrope text-xs font-bold text-white">up</span>
-              </div>
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- ==================== RIGHT COLUMN (7 GRIDS) ==================== -->
-        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
-
-          <!-- Column 1: Services -->
-          <div class="flex flex-col gap-3">
-            <h4 class="font-manrope text-base font-bold text-white">
-              Services
-            </h4>
-            <ul class="flex flex-col gap-2.5 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
-              <li><a href="#shopify" class="transition-colors hover:text-white">Shopify SEO</a></li>
-              <li><a href="#webflow" class="transition-colors hover:text-white">Webflow SEO</a></li>
-              <li><a href="#wordpress" class="transition-colors hover:text-white">WordPress SEO</a></li>
-              <li><a href="#wix" class="transition-colors hover:text-white">Wix SEO</a></li>
-              <li><a href="#technical" class="transition-colors hover:text-white">Technical SEO</a></li>
-              <li><a href="#onpage" class="transition-colors hover:text-white">On-Page SEO</a></li>
-              <li><a href="#aeo" class="transition-colors hover:text-white">AEO · GEO · LLMO</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 2: Pages -->
-          <div class="flex flex-col gap-3">
-            <h4 class="font-manrope text-base font-bold text-white">
-              Pages
-            </h4>
-            <ul class="flex flex-col gap-2.5 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
-              <li><a href="#home" class="transition-colors hover:text-white">Home</a></li>
-              <li><a href="#services" class="transition-colors hover:text-white">Services</a></li>
-              <li><a href="#works" class="transition-colors hover:text-white">My Works</a></li>
-              <li><a href="#about" class="transition-colors hover:text-white">About Me</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 3: Connect -->
-          <div class="col-span-2 flex flex-col gap-3 sm:col-span-1">
-            <h4 class="font-manrope text-base font-bold text-white">
-              Connect
-            </h4>
-            <div class="flex flex-col gap-2 font-manrope text-xs font-medium text-[#9898A0] sm:text-sm">
-              <a href="#upwork-profile" class="inline-flex items-center gap-1.5 font-semibold text-white hover:underline">
-                <span class="text-[#14A800]">up</span>
-                <span>★ Upwork profile</span>
+                <!-- Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="h-5 w-5 sm:h-6 sm:w-6">
+                  <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    fill="white" />
+                </svg>
               </a>
-              <p class="mt-1 text-[#9898A0]">
-                All inquiries via Upwork
-              </p>
             </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer
+      class="relative z-10 bg-white bg-no-repeat pt-30 sm:pt-44 md:pt-52 lg:pt-80 text-white rounded-t-xl lg:rounded-t-[36px] lg:mx-5"
+      data-nav-theme="dark" style="
+    background-image: url('assets/images/footer-banner.webp');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  ">
+
+      <div class="container">
+
+        <!-- 12-Column Grid Container -->
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
+
+          <!-- ==================== LEFT COLUMN (5 GRIDS) ==================== -->
+          <div class="relative flex flex-col items-start lg:col-span-5">
+
+            <!-- Name Heading -->
+            <a href="index.html"
+              class="font-agency text-white text-2xl sm:text-[32px] md:text-[42px] font-normal capitalize mb-3 md:mb-8">
+              Rezaul Karim
+            </a>
+
+            <!-- Description -->
+            <p
+              class="font-manrope text-sm sm:text-base md:text-xl font-normal leading-[130%] text-white opacity-[0.5] max-w-95.5">
+              5yr agency SEO · 120+ projects · Available globally via Upwork.
+            </p>
+
+            <!-- Watermark + CTA -->
+            <div class="relative mt-6 w-full">
+
+              <!-- REZAUL Watermark -->
+              <img src="assets/images/footer-Rezaul.webp" alt="Rezaul Watermark"
+                class="pointer-events-none select-none object-contain" />
+
+              <!-- CTA Button -->
+              <a href="#"
+                class="common-cta-btn group absolute left-[30px] bottom-[5px] rotate-[-2deg] inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+
+                <!-- Left Purple Segment -->
+                <div
+                  class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
+                  Hire me on Upwork
+                </div>
+
+                <!-- Inner Joint Graphic -->
+                <img src="assets/images/cta-button-join.svg" alt=""
+                  class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+
+                <!-- Right Green Segment -->
+                <div
+                  class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
+                  <img src="assets/images/cta-up.svg" alt="Upwork"
+                    class="h-full w-full shrink-0 select-none no-parallax" />
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- ==================== RIGHT COLUMN (7 GRIDS) ==================== -->
+          <div class="footer-columns">
+
+            <!-- Column 1: Services -->
+            <div class="footer-column">
+              <h4 class="footer-column-title">
+                Services
+              </h4>
+
+              <ul class="footer-column-list">
+                <li><a href="#">Shopify SEO</a></li>
+                <li><a href="#">Webflow SEO</a></li>
+                <li><a href="#">WordPress SEO</a></li>
+                <li><a href="#">Wix SEO</a></li>
+                <li><a href="#">Technical SEO</a></li>
+                <li><a href="#">On-Page SEO</a></li>
+                <li><a href="#">AEO · GEO · LLMO</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Pages -->
+            <div class="footer-column">
+              <h4 class="footer-column-title">
+                Pages
+              </h4>
+
+              <ul class="footer-column-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">My Works</a></li>
+                <li><a href="#">About Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Connect -->
+            <div class="footer-column footer-connect">
+              <h4 class="footer-column-title">
+                Connect
+              </h4>
+
+              <div class="footer-connect-content">
+                <a href="#" class="upwork-link">
+                  <img src="assets/images/footer-upwork-icon.svg" alt="upwork">
+                  <span>★ Upwork profile</span>
+                </a>
+
+                <p class="upwork-description">
+                  All inquiries via Upwork
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
+        <!-- Bottom Links Row -->
+        <div
+          class="mt-16 flex items-center justify-end gap-6 pb-16 text-white/60 font-manrope text-sm sm:text-base md:text-lg font-medium leading-[130%]">
+          <a href="#privacy" class="transition-colors hover:text-white">Privacy</a>
+          <a href="#terms" class="transition-colors hover:text-white">Terms</a>
+        </div>
+
       </div>
 
-      <!-- Bottom Links Row (Privacy / Terms) -->
-      <div class="mt-16 flex items-center justify-end gap-6 pb-16 font-manrope text-xs font-medium text-[#9898A0]">
-        <a href="#privacy" class="transition-colors hover:text-white">Privacy</a>
-        <a href="#terms" class="transition-colors hover:text-white">Terms</a>
+      <!-- Bottom Centered Copyright -->
+      <div class="absolute bottom-2 left-1/2 -translate-x-1/2">
+        <div class="">
+          <span class=" text-black font-manrope text-sm sm:text-base md:text-xl font-bold leading-[130%]">
+            © 2026 Rezaul Karim
+          </span>
+
+        </div>
       </div>
 
-    </div>
+    </footer>
 
-    <!-- Bottom Centered Copyright White Shape Tab -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2">
-      <div class="flex items-center justify-center rounded-t-2xl bg-white px-8 py-2.5 shadow-lg md:px-12 md:py-3">
-        <span class="whitespace-nowrap font-manrope text-xs font-bold text-[#1C1C1C] sm:text-sm">
-          © 2026 Rezaul Karim
-        </span>
-      </div>
-    </div>
-
-  </footer>
-
-</div>
+  </div>
 
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>

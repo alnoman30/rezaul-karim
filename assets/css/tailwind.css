@@ -183,101 +183,711 @@ html.lenis body {
 
 
 /* MHeading navigation bar css */
+/* =========================================================
+   HEADER
+========================================================= */
+
 #main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  width: 100%;
+
   transition:
     background-color 0.4s ease,
     backdrop-filter 0.4s ease,
     box-shadow 0.4s ease;
 }
 
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.header-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+/*
+   If your original Tailwind "container" class had a
+   max-width, use this section to reproduce it.
+*/
+
+@media (min-width: 640px) {
+  .header-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .header-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+#desktop-logo {
+  flex-shrink: 0;
+}
+
+
+.logo-text {
+  display: inline-block;
+
+  font-family: "Agency", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 4rem;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  text-transform: capitalize;
+}
+
+
+/* sm:text-[32px] */
+@media (min-width: 640px) {
+  .logo-text {
+    font-size: 32px;
+  }
+}
+
+
+/* md:text-[42px] */
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 42px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION WRAPPER
+========================================================= */
+
 #navPillWrap {
   position: relative;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
 }
 
-.progress-ring {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+
+/* =========================================================
+   DESKTOP NAVIGATION PILL
+========================================================= */
+
+#desktop-nav {
+  display: flex;
+  align-items: center;
+
+  padding: 0.375rem;
+
+  gap: 1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 9999px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-/* Mobile Menu Drawer Animation */
+
+/* xl:gap-12 */
+@media (min-width: 1280px) {
+  #desktop-nav {
+    gap: 3rem;
+  }
+}
+
+
+/* =========================================================
+   NAV ITEMS
+========================================================= */
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.75rem 1.5rem;
+
+  border-radius: 9999px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  line-height: 120%;
+  letter-spacing: -1px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* xl:text-xl */
+@media (min-width: 1280px) {
+  .nav-item {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* Nav hover */
+
+.nav-item:hover {
+  background-color: #523EC5;
+  color: #ffffff;
+
+  box-shadow:
+    0 0 20px rgba(82, 62, 197, 0.4);
+}
+
+
+/* Active nav */
+
+.nav-item.active {
+  background-color: #523EC5;
+  color: #ffffff;
+
+  box-shadow:
+    0 0 20px rgba(82, 62, 197, 0.4);
+}
+
+
+/* =========================================================
+   SERVICES DROPDOWN
+========================================================= */
+
+.services-dropdown {
+  position: relative;
+
+  gap: 0.375rem;
+}
+
+
+/* =========================================================
+   SERVICES ARROW
+========================================================= */
+
+.services-arrow {
+  width: 1rem;
+  height: 1rem;
+
+  fill: currentColor;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* Original group-hover:rotate-180 */
+
+.services-dropdown:hover .services-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DESKTOP CTA
+========================================================= */
+
+#desktop-cta {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.625rem 1.5rem;
+
+  border-radius: 9999px;
+
+  background-color: #F36D04;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    filter 0.5s ease;
+}
+
+
+#desktop-cta:hover {
+  filter: brightness(1.25);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+#mobile-menu-toggle {
+  position: relative;
+  z-index: 50;
+
+  display: flex;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.375rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 9999px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   HAMBURGER LINES
+========================================================= */
+
+#mobile-menu-toggle .line-1,
+#mobile-menu-toggle .line-2 {
+  display: block;
+
+  height: 2px;
+
+  border-radius: 9999px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* First line */
+
+#mobile-menu-toggle .line-1 {
+  width: 1.5rem;
+
+  background-color: #F36D04;
+}
+
+
+/* Second line */
+
+#mobile-menu-toggle .line-2 {
+  width: 1.25rem;
+
+  background-color: #ffffff;
+}
+
+
+/* =========================================================
+   HAMBURGER OPEN STATE
+========================================================= */
+
+#mobile-menu-toggle.is-open .line-1 {
+  transform: translateY(4px) rotate(45deg);
+}
+
+
+#mobile-menu-toggle.is-open .line-2 {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE FULLSCREEN MENU
+========================================================= */
+
 #mobile-menu {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 40;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+
+  background-color: rgba(10, 10, 13, 0.95);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
   transform: translateY(-20px);
+
   transition:
     opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     visibility 0.3s ease;
 }
 
+
+/* =========================================================
+   MOBILE MENU OPEN
+========================================================= */
+
 #mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+
   transform: translateY(0);
 }
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-nav {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+.mobile-link {
+  font-family: "Agency", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+
+  line-height: normal;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.mobile-link:hover {
+  color: #523EC5;
+}
+
+
+/* =========================================================
+   MOBILE LINK ANIMATION
+========================================================= */
+
+#mobile-menu .mobile-link {
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+#mobile-menu.is-open .mobile-link {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE CTA
+========================================================= */
+
+.mobile-cta {
+  margin-top: 1rem;
+
+  padding: 0.875rem 2.5rem;
+
+  border-radius: 9999px;
+
+  background-color: #F36D04;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 0 20px rgba(243, 109, 4, 0.4);
+
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.mobile-cta:hover {
+  background-color: #E06000;
+}
+
+
+/* =========================================================
+   BODY WHEN MOBILE MENU IS OPEN
+========================================================= */
 
 body.menu-open {
   overflow: hidden;
 }
 
-.mobile-link {
-  opacity: 0;
-  transform: translateY(15px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+
+/* =========================================================
+   PROGRESS RING
+========================================================= */
+
+.progress-ring {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
 }
 
-#mobile-menu.is-open .mobile-link {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-/* Animated Hamburger Icon */
-#mobile-menu-toggle .line-1,
-#mobile-menu-toggle .line-2 {
-  transition: transform 0.3s ease;
-}
-
-#mobile-menu-toggle.is-open .line-1 {
-  transform: translateY(4px) rotate(45deg);
-}
-
-#mobile-menu-toggle.is-open .line-2 {
-  transform: translateY(-4px) rotate(-45deg);
-}
+/* =========================================================
+   MOBILE HEADER
+   Equivalent to max-width: 1023.98px
+========================================================= */
 
 @media (max-width: 1023.98px) {
+
   #main-header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     background: transparent;
+
     backdrop-filter: blur(0);
     -webkit-backdrop-filter: blur(0);
+
     box-shadow: none;
   }
 
+
+  /* Header after scrolling */
+
   #main-header.mobile-scrolled {
     background: rgba(10, 10, 13, 0.90);
+
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.4);
   }
+
 
   #navPillWrap {
     display: none;
   }
+
+
+  #desktop-cta {
+    display: none;
+  }
+
+
+  #mobile-menu-toggle {
+    display: flex;
+  }
 }
 
-.active {
-  background-color: #523EC5;
-  color: white;
-  box-shadow: 0 0 20px rgba(82, 62, 197, 0.4);
+
+/* =========================================================
+   DESKTOP
+   Equivalent to lg:
+========================================================= */
+
+@media (min-width: 1024px) {
+
+  #main-header {
+    padding-top: 2rem;
+
+  }
+
+
+  #navPillWrap {
+    display: flex;
+  }
+
+
+  #desktop-cta {
+    display: inline-flex;
+  }
+
+
+  #mobile-menu-toggle {
+    display: none;
+  }
+
+
+  #mobile-menu {
+    display: none;
+  }
+}
+
+/* =========================================================
+   GSAP NAV THEME
+========================================================= */
+
+#desktop-nav .nav-item,
+#desktop-nav .services-arrow {
+  color: #ffffff;
+}
+
+
+/* Light section */
+
+#desktop-nav.nav-theme-light .nav-item {
+  color: #111111;
+}
+
+#desktop-nav.nav-theme-light .services-arrow {
+  color: #111111;
+}
+
+
+/* Keep active item readable */
+
+#desktop-nav.nav-theme-light .nav-item.active {
+  color: #ffffff;
+}
+
+
+/* Hover */
+
+#desktop-nav.nav-theme-light .nav-item:hover {
+  color: #ffffff;
+}
+
+
+/* Optional: make nav border slightly darker on light backgrounds */
+
+#desktop-nav.nav-theme-light {
+  border-color: rgba(0, 0, 0, 0.10);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================
+   GSAP LOGO THEME
+========================================================= */
+
+#desktop-logo .logo-text {
+  color: #ffffff;
+  transition: color 0.35s ease;
 }
 
 
@@ -353,7 +963,20 @@ body.menu-open {
 }
 
 
+/* H1, h2 heading reveal */
+.split-heading {
+  overflow: visible;
+}
 
+.split-heading .line {
+  display: block;
+  overflow: hidden;
+}
+
+.split-heading .line-inner {
+  display: block;
+  will-change: transform;
+}
 
 /* Optional image/logo animation */
 .service-card img {
@@ -495,3 +1118,238 @@ body.menu-open {
   opacity: 1;
   transform: none;
 }
+
+
+/* Footer css */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  /* gap-8 */
+}
+
+
+/* =========================================
+   Footer Column
+========================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  /* gap-3 */
+}
+
+
+/* =========================================
+   Column Title
+========================================= */
+
+.footer-column-title {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  /* text-lg */
+  font-weight: 600;
+  line-height: 120%;
+  color: #fff;
+}
+
+
+/* =========================================
+   Column List
+========================================= */
+
+.footer-column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  /* gap-2.5 */
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  /* text-sm */
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.footer-column-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column-list a {
+  display: inline-block;
+
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  transition:
+    color 300ms ease,
+    padding-left 300ms ease;
+}
+
+.footer-column-list a:hover {
+  color: #fff;
+  padding-left: 0.5rem;
+  /* hover:pl-2 */
+}
+
+
+/* =========================================
+   Connect Column
+========================================= */
+
+.footer-connect {
+  grid-column: span 2;
+}
+
+
+/* =========================================
+   Connect Content
+========================================= */
+
+.footer-connect-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* gap-2 */
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+
+/* =========================================
+   Upwork Link
+========================================= */
+
+.upwork-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  /* gap-1.5 */
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+
+  transition: color 300ms ease;
+}
+
+.upwork-link img {
+  width: 22px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.upwork-link:hover {
+  color: #f36d04;
+}
+
+
+/* =========================================
+   Upwork Description
+========================================= */
+
+.upwork-description {
+  margin: 0.25rem 0 0;
+  /* mt-1 */
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   Small Screens - 640px+
+   Equivalent to sm:
+========================================= */
+
+@media (min-width: 640px) {
+
+  .footer-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-connect {
+    grid-column: span 1;
+  }
+
+  .footer-column-title {
+    font-size: 1.25rem;
+    /* text-xl */
+  }
+
+  .footer-column-list,
+  .footer-connect-content {
+    font-size: 1rem;
+    /* text-base */
+  }
+
+  .upwork-description {
+    margin-top: 0.75rem;
+    /* sm:mt-3 */
+    font-size: 1rem;
+  }
+}
+
+
+/* =========================================
+   Large Screens - 1024px+
+   Equivalent to lg:
+========================================= */
+
+@media (min-width: 1024px) {
+
+  .footer-columns {
+    grid-column: span 7;
+  }
+
+  .footer-column-title {
+    font-size: 1.5rem;
+    /* md:text-2xl actually starts at md */
+  }
+
+  .footer-column-list,
+  .footer-connect-content,
+  .upwork-description {
+    font-size: 1.125rem;
+    /* md:text-lg */
+  }
+}
+
+
+/* =========================================
+   Medium Screens - 768px+
+   Equivalent to md:
+========================================= */
+
+@media (min-width: 768px) {
+
+  .footer-column-title {
+    font-size: 1.5rem;
+    /* text-2xl */
+  }
+
+  .footer-column-list,
+  .footer-connect-content,
+  .upwork-description {
+    font-size: 1.125rem;
+    /* text-lg */
+  }
+}
+
+/* Home page CSS end */
+
