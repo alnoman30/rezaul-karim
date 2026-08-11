@@ -153,24 +153,63 @@
                 </p>
 
                 <!-- cta button -->
-                <a href="#"
-                    class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+                <a href="#" id="cta-button" class="group relative inline-flex h-10 sm:h-12 md:h-14 items-center
+          text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-                    <!-- Left Purple Segment -->
-                    <div
-                        class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-                        Hire me on Upwork
+                    <!-- Gradient Background -->
+                    <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+                opacity-0
+                bg-gradient-to-r
+                from-[#5B43E8]
+                via-[#267F55]
+                to-[#12A000]">
                     </div>
 
+
+                    <!-- Left Purple Segment -->
+                    <div id="cta-left" class="flex h-full items-center justify-center
+                bg-[#523EC5]
+                pl-4 pr-3
+                sm:pl-5 sm:pr-4
+                md:pl-6 md:pr-5
+                rounded-[50px]
+                font-manrope text-sm sm:text-base md:text-xl
+                font-medium whitespace-nowrap
+                z-10">
+
+                        Hire me on Upwork
+
+                    </div>
+
+
                     <!-- Inner Joint Graphic -->
-                    <img src="assets/images/cta-button-join.svg" alt
-                        class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+                    <div id="cta-join" class="h-full flex items-center justify-center
+                -mx-[6px]
+                z-20
+                shrink-0
+                will-change-transform">
+
+                        <img src="assets/images/cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+                    w-3 sm:w-3.5 md:w-4.25
+                    pointer-events-none
+                    no-parallax" />
+
+                    </div>
+
 
                     <!-- Right Green Segment -->
-                    <div
-                        class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-                        <img src="assets/images/cta-up.svg" alt="Upwork"
-                            class="h-full w-full shrink-0 select-none no-parallax" />
+                    <div id="cta-right" class="flex h-full items-center justify-center
+                bg-[#108A00]
+                pl-3 pr-4
+                sm:pl-4 sm:pr-5
+                md:pl-5 md:pr-6
+                rounded-[50px]
+                z-10
+                shrink-0
+                will-change-transform">
+
+                        <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
                     </div>
 
                 </a>
@@ -453,7 +492,7 @@
                 <!-- Card 2: Center Image -->
                 <div
                     class="rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl overflow-hidden max-h-50 lg:min-h-107.5 relative">
-                    <img src="assets/images/shopify-seo-preview.png" alt="Shopify SEO on Laptop"
+                    <img src="assets/images/shopify-seo-preview.webp" alt="Shopify SEO on Laptop"
                         class="w-full h-full object-cover object-center" />
                 </div>
 
@@ -566,7 +605,7 @@
                 <!-- Card 2: Center Image -->
                 <div
                     class="rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl overflow-hidden max-h-50 lg:min-h-107.5 relative">
-                    <img src="assets/images/webflow-seo-preview.png" alt="Webflow SEO on Laptop"
+                    <img src="assets/images/webflow-seo-preview.webp" alt="Webflow SEO on Laptop"
                         class="w-full h-full object-cover object-center" />
                 </div>
 
@@ -654,7 +693,7 @@
                 <!-- Card 2: Center Image -->
                 <div
                     class="rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl overflow-hidden max-h-50 lg:min-h-107.5 relative">
-                    <img src="assets/images/aeo-seo-preview.png" alt="AEO & GEO"
+                    <img src="assets/images/aeo-seo-preview.webp" alt="AEO & GEO"
                         class="w-full h-full object-cover object-center" />
                 </div>
 
@@ -747,7 +786,7 @@
                 <div
                     class="rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl overflow-hidden min-h-[200px] lg:min-h-[430px] relative h-full">
 
-                    <img src="assets/images/llmo-seo-preview.png" alt="LLMO"
+                    <img src="assets/images/llmo-seo-preview.webp" alt="LLMO"
                         class="w-full h-full object-cover object-center">
 
                 </div>
@@ -835,25 +874,64 @@
 
             <!-- CTA Button -->
             <div class="mt-2 sm:mt-4">
-              <!-- cta button -->
-              <a href="#"
-                class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+              <!-- CTA button -->
+              <a href="#" id="cta-button" class="group relative inline-flex h-10 sm:h-12 md:h-14 items-center
+    text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-                <!-- Left Purple Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#F36D04] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-                  Hire me on Upwork
+                <!-- Gradient Background -->
+                <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+        opacity-0
+        bg-gradient-to-r
+        from-[#F36D04]
+        via-[#267F55]
+        to-[#12A000]">
                 </div>
 
+
+                <!-- Left Orange Segment -->
+                <div id="cta-left" class="flex h-full items-center justify-center
+        bg-[#F36D04]
+        pl-4 pr-3
+        sm:pl-5 sm:pr-4
+        md:pl-6 md:pr-5
+        rounded-[50px]
+        font-manrope text-sm sm:text-base md:text-xl
+        font-medium whitespace-nowrap
+        z-10">
+
+                  Hire me on Upwork
+
+                </div>
+
+
                 <!-- Inner Joint Graphic -->
-                <img src="assets/images/orange-cta-button-join.svg" alt="hire me"
-                  class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+                <div id="cta-join" class="h-full flex items-center justify-center
+        -mx-[6px]
+        z-20
+        shrink-0
+        will-change-transform">
+
+                  <img src="assets/images/orange-cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+            w-3 sm:w-3.5 md:w-4.25
+            pointer-events-none
+            no-parallax" />
+
+                </div>
+
 
                 <!-- Right Green Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-                  <img src="assets/images/cta-up.svg" alt="Upwork"
-                    class="h-full w-full shrink-0 select-none no-parallax" />
+                <div id="cta-right" class="flex h-full items-center justify-center
+        bg-[#108A00]
+        pl-3 pr-4
+        sm:pl-4 sm:pr-5
+        md:pl-5 md:pr-6
+        rounded-[50px]
+        z-10
+        shrink-0
+        will-change-transform">
+
+                  <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
                 </div>
 
               </a>
@@ -904,24 +982,63 @@
                 class="pointer-events-none select-none object-contain" />
 
               <!-- CTA Button -->
-              <a href="#"
-                class="common-cta-btn group absolute left-[30px] bottom-[5px] rotate-[-2deg] inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+              <a href="#" id="cta-button" class="group absolute left-[30px] bottom-[5px] rotate-[-2deg] inline-flex h-10 sm:h-12 md:h-14 items-center
+          text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-                <!-- Left Purple Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-                  Hire me on Upwork
+                <!-- Gradient Background -->
+                <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+                opacity-0
+                bg-gradient-to-r
+                from-[#5B43E8]
+                via-[#267F55]
+                to-[#12A000]">
                 </div>
 
+
+                <!-- Left Purple Segment -->
+                <div id="cta-left" class="flex h-full items-center justify-center
+                bg-[#523EC5]
+                pl-4 pr-3
+                sm:pl-5 sm:pr-4
+                md:pl-6 md:pr-5
+                rounded-[50px]
+                font-manrope text-sm sm:text-base md:text-xl
+                font-medium whitespace-nowrap
+                z-10">
+
+                  Hire me on Upwork
+
+                </div>
+
+
                 <!-- Inner Joint Graphic -->
-                <img src="assets/images/cta-button-join.svg" alt=""
-                  class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+                <div id="cta-join" class="h-full flex items-center justify-center
+                -mx-[6px]
+                z-20
+                shrink-0
+                will-change-transform">
+
+                  <img src="assets/images/cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+                    w-3 sm:w-3.5 md:w-4.25
+                    pointer-events-none
+                    no-parallax" />
+
+                </div>
+
 
                 <!-- Right Green Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-                  <img src="assets/images/cta-up.svg" alt="Upwork"
-                    class="h-full w-full shrink-0 select-none no-parallax" />
+                <div id="cta-right" class="flex h-full items-center justify-center
+                bg-[#108A00]
+                pl-3 pr-4
+                sm:pl-4 sm:pr-5
+                md:pl-5 md:pr-6
+                rounded-[50px]
+                z-10
+                shrink-0
+                will-change-transform">
+
+                  <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
                 </div>
 
               </a>

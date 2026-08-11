@@ -160,23 +160,63 @@
         </p>
 
         <!-- cta button -->
-        <a href="#"
-          class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+        <a href="#" id="cta-button" class="group relative inline-flex h-10 sm:h-12 md:h-14 items-center
+          text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-          <!-- Left Purple Segment -->
-          <div
-            class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-            Hire me on Upwork
+          <!-- Gradient Background -->
+          <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+                opacity-0
+                bg-gradient-to-r
+                from-[#5B43E8]
+                via-[#267F55]
+                to-[#12A000]">
           </div>
 
+
+          <!-- Left Purple Segment -->
+          <div id="cta-left" class="flex h-full items-center justify-center
+                bg-[#523EC5]
+                pl-4 pr-3
+                sm:pl-5 sm:pr-4
+                md:pl-6 md:pr-5
+                rounded-[50px]
+                font-manrope text-sm sm:text-base md:text-xl
+                font-medium whitespace-nowrap
+                z-10">
+
+            Hire me on Upwork
+
+          </div>
+
+
           <!-- Inner Joint Graphic -->
-          <img src="assets/images/cta-button-join.svg" alt="hire me"
-            class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+          <div id="cta-join" class="h-full flex items-center justify-center
+                -mx-[6px]
+                z-20
+                shrink-0
+                will-change-transform">
+
+            <img src="assets/images/cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+                    w-3 sm:w-3.5 md:w-4.25
+                    pointer-events-none
+                    no-parallax" />
+
+          </div>
+
 
           <!-- Right Green Segment -->
-          <div
-            class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-            <img src="assets/images/cta-up.svg" alt="Upwork" class="h-full w-full shrink-0 select-none no-parallax" />
+          <div id="cta-right" class="flex h-full items-center justify-center
+                bg-[#108A00]
+                pl-3 pr-4
+                sm:pl-4 sm:pr-5
+                md:pl-5 md:pr-6
+                rounded-[50px]
+                z-10
+                shrink-0
+                will-change-transform">
+
+            <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
           </div>
 
         </a>
@@ -192,13 +232,13 @@
   <section class=" px-3 pt-4 pb-3 sm:px-4 sm:pt-5" data-nav-theme="light">
     <div>
       <div
-        class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-[60px] lg:py-[40px]">
+        class="overflow-hidden rounded-[500px] bg-[#F3F3F3] px-4 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8 lg:px-15 lg:py-10">
 
         <div id="marquee-splide" class="splide cursor-default" aria-label="SEO Services Marquee">
           <div class="splide__track">
             <ul class="splide__list items-center">
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   Shopify SEO
@@ -210,7 +250,7 @@
                 </svg>
               </li>
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   Webflow SEO
@@ -222,7 +262,7 @@
                 </svg>
               </li>
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   WordPress SEO
@@ -234,7 +274,7 @@
                 </svg>
               </li>
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   Wix SEO
@@ -246,7 +286,7 @@
                 </svg>
               </li>
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   Technical SEO
@@ -258,7 +298,7 @@
                 </svg>
               </li>
 
-              <li class="splide__slide !flex items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+              <li class="splide__slide flex! items-center justify-center gap-3 sm:gap-5 lg:gap-6">
                 <span
                   class="font-manrope whitespace-nowrap text-base font-bold leading-none text-black sm:text-xl lg:text-2xl">
                   On-Page SEO
@@ -293,11 +333,11 @@
             class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
           <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+            <span class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
               <span class="counter" data-target="5" data-suffix="yr">
                 5yr
               </span>
-            </h3>
+            </span>
 
             <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
               Agency experience
@@ -313,11 +353,11 @@
             class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
           <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+            <span class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
               <span class="counter" data-target="120" data-suffix="+">
                 120+
               </span>
-            </h3>
+            </span>
 
             <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
               Projects delivered
@@ -333,11 +373,11 @@
             class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
           <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+            <span class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
               <span class="counter" data-target="4" data-suffix="×">
                 4×
               </span>
-            </h3>
+            </span>
 
             <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
               Avg. traffic lift
@@ -353,9 +393,9 @@
             class="pointer-events-none absolute bottom-0 right-0 h-full w-auto select-none object-cover object-bottom-right" />
 
           <div class="relative z-10 flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
-            <h3 class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
+            <span class="font-manrope text-2xl sm:text-3xl md:text-[48px] font-extrabold leading-none">
               AI
-            </h3>
+            </span>
 
             <p class="font-manrope text-sm sm:text-base md:text-lg leading-tight text-[#373737]">
               Cited in ChatGPT · Gemini · Perplexity
@@ -396,8 +436,7 @@
         <div
           class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
           <!-- Full Image Area -->
-          <div
-            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+          <div class="h-45 w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-55 md:h-60 lg:h-50">
             <img src="assets/images/service-shopify.webp" alt="Shopify"
               class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
           </div>
@@ -429,8 +468,7 @@
         <div
           class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
           <!-- Full Image Area -->
-          <div
-            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+          <div class="h-45 w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-55 md:h-60 lg:h-50">
             <img src="assets/images/service-webflow.webp" alt="Webflow SEO"
               class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
           </div>
@@ -460,7 +498,7 @@
           class="service-card group flex flex-col justify-between overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-1.25 transition-all duration-300">
           <!-- Full Image Area -->
           <div
-            class="h-[180px] w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-[220px] md:h-[240px] lg:h-[200px]">
+            class="h-45 w-full overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl sm:h-55 md:h-60 lg:h-[200px]">
             <img src="assets/images/service-wordpress.webp" alt="WordPress"
               class="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
           </div>
@@ -973,7 +1011,15 @@
 
         <!-- ==================== CARD 1:==================== -->
         <a href="#"
-          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          class="project-card group relative grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12 cursor-none">
+
+          <!-- Custom Following Cursor Badge -->
+          <div
+            class="custom-cursor pointer-events-none absolute left-0 top-0 z-50 flex items-center justify-center gap-2.5 rounded-full bg-[#523EC5] px-5 py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white shadow-lg opacity-0 scale-75 -rotate-6">
+            <span>View</span>
+            <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+          </div>
+
           <!-- Image Area: 3 / 12 Columns -->
           <div class="p-1.25 md:col-span-5 lg:col-span-3">
             <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
@@ -1023,32 +1069,21 @@
               </div>
             </div>
 
-            <!-- Bottom Metrics + Button -->
-            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <!-- Metric Pills -->
-              <div class="flex flex-wrap items-center gap-2">
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  +310% traffic
-                </span>
-
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  4× revenue
-                </span>
-
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  AI Overview cited
-                </span>
-              </div>
-
-              <!-- View Button -->
+            <!-- Bottom Metrics -->
+            <div class="mt-6 flex flex-wrap items-center gap-2">
               <span
-                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
-                <span>View</span>
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                +310% traffic
+              </span>
 
-                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              <span
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                4× revenue
+              </span>
+
+              <span
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                AI Overview cited
               </span>
             </div>
           </div>
@@ -1056,7 +1091,15 @@
 
         <!-- ==================== CARD 2:==================== -->
         <a href="#"
-          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          class="project-card group relative grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12 cursor-none">
+
+          <!-- Custom Following Cursor Badge -->
+          <div
+            class="custom-cursor pointer-events-none absolute left-0 top-0 z-50 flex items-center justify-center gap-2.5 rounded-full bg-[#523EC5] px-5 py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white shadow-lg opacity-0 scale-75 -rotate-6">
+            <span>View</span>
+            <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+          </div>
+
           <!-- Image Area: 3 / 12 Columns -->
           <div class="p-1.25 md:col-span-5 lg:col-span-3">
             <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
@@ -1106,27 +1149,16 @@
               </div>
             </div>
 
-            <!-- Bottom Metrics + Button -->
-            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <!-- Metric Pills -->
-              <div class="flex flex-wrap items-center gap-2">
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  +280% traffic
-                </span>
-
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  8 LLM citations
-                </span>
-              </div>
-
-              <!-- View Button -->
+            <!-- Bottom Metrics -->
+            <div class="mt-6 flex flex-wrap items-center gap-2">
               <span
-                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
-                <span>View</span>
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                +280% traffic
+              </span>
 
-                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              <span
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                8 LLM citations
               </span>
             </div>
           </div>
@@ -1134,7 +1166,15 @@
 
         <!-- ==================== CARD 3:==================== -->
         <a href="#"
-          class="group grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12">
+          class="project-card group relative grid grid-cols-1 overflow-hidden rounded-xl md:rounded-3xl border border-[#D8D8D8] bg-white transition-all duration-300 hover:border-[#F36D04] hover:shadow-[5px_20px_60px_0_rgba(0,0,0,0.05)] md:grid-cols-12 cursor-none">
+
+          <!-- Custom Following Cursor Badge -->
+          <div
+            class="custom-cursor pointer-events-none absolute left-0 top-0 z-50 flex items-center justify-center gap-2.5 rounded-full bg-[#523EC5] px-5 py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white shadow-lg opacity-0 scale-75 -rotate-6">
+            <span>View</span>
+            <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+          </div>
+
           <!-- Image Area: 3 / 12 Columns -->
           <div class="p-1.25 md:col-span-5 lg:col-span-3">
             <div class="h-40 overflow-hidden rounded-xl md:rounded-[20px] sm:h-44 md:h-full">
@@ -1184,32 +1224,21 @@
               </div>
             </div>
 
-            <!-- Bottom Metrics + Button -->
-            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <!-- Metric Pills -->
-              <div class="flex flex-wrap items-center gap-2">
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  14 AI Overviews
-                </span>
-
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  ChatGPT cited
-                </span>
-
-                <span
-                  class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
-                  +190% organic
-                </span>
-              </div>
-
-              <!-- View Button -->
+            <!-- Bottom Metrics -->
+            <div class="mt-6 flex flex-wrap items-center gap-2">
               <span
-                class="flex w-full shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#523EC5] py-2 px-5 md:py-2.5 font-manrope text-base md:text-xl font-medium leading-[120%] text-white transition-all duration-300 ease-out hover:brightness-125 sm:w-auto sm:self-auto lg:invisible lg:rotate-0 lg:opacity-0 lg:group-hover:visible lg:group-hover:rotate-[-4deg] lg:group-hover:opacity-100">
-                <span>View</span>
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                14 AI Overviews
+              </span>
 
-                <img src="assets/images/btn-arrow.svg" alt="arrow" class="h-4 w-4 object-contain sm:h-6 sm:w-6" />
+              <span
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                ChatGPT cited
+              </span>
+
+              <span
+                class="rounded-full border border-[#523EC5] bg-[rgba(82,62,197,0.05)] px-3 py-1.5 font-manrope text-sm font-semibold leading-[125%] text-[#523EC5] backdrop-blur-[3.5px] sm:px-6 sm:py-3 md:text-base">
+                +190% organic
               </span>
             </div>
           </div>
@@ -1669,25 +1698,64 @@
 
             <!-- CTA Button -->
             <div class="mt-2 sm:mt-4">
-              <!-- cta button -->
-              <a href="#"
-                class="common-cta-btn group inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+              <!-- CTA button -->
+              <a href="#" id="cta-button" class="group relative inline-flex h-10 sm:h-12 md:h-14 items-center
+    text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-                <!-- Left Purple Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#F36D04] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-                  Hire me on Upwork
+                <!-- Gradient Background -->
+                <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+        opacity-0
+        bg-gradient-to-r
+        from-[#F36D04]
+        via-[#267F55]
+        to-[#12A000]">
                 </div>
 
+
+                <!-- Left Orange Segment -->
+                <div id="cta-left" class="flex h-full items-center justify-center
+        bg-[#F36D04]
+        pl-4 pr-3
+        sm:pl-5 sm:pr-4
+        md:pl-6 md:pr-5
+        rounded-[50px]
+        font-manrope text-sm sm:text-base md:text-xl
+        font-medium whitespace-nowrap
+        z-10">
+
+                  Hire me on Upwork
+
+                </div>
+
+
                 <!-- Inner Joint Graphic -->
-                <img src="assets/images/orange-cta-button-join.svg" alt="hire me"
-                  class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+                <div id="cta-join" class="h-full flex items-center justify-center
+        -mx-[6px]
+        z-20
+        shrink-0
+        will-change-transform">
+
+                  <img src="assets/images/orange-cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+            w-3 sm:w-3.5 md:w-4.25
+            pointer-events-none
+            no-parallax" />
+
+                </div>
+
 
                 <!-- Right Green Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-                  <img src="assets/images/cta-up.svg" alt="Upwork"
-                    class="h-full w-full shrink-0 select-none no-parallax" />
+                <div id="cta-right" class="flex h-full items-center justify-center
+        bg-[#108A00]
+        pl-3 pr-4
+        sm:pl-4 sm:pr-5
+        md:pl-5 md:pr-6
+        rounded-[50px]
+        z-10
+        shrink-0
+        will-change-transform">
+
+                  <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
                 </div>
 
               </a>
@@ -1738,24 +1806,63 @@
                 class="pointer-events-none select-none object-contain" />
 
               <!-- CTA Button -->
-              <a href="#"
-                class="common-cta-btn group absolute left-[30px] bottom-[5px] rotate-[-2deg] inline-flex h-10 sm:h-12 md:h-14 items-center text-white transition-transform hover:brightness-125 duration-300">
+              <a href="#" id="cta-button" class="group absolute left-[30px] bottom-[5px] rotate-[-2deg] inline-flex h-10 sm:h-12 md:h-14 items-center
+          text-white cursor-pointer select-none rounded-[50px] overflow-hidden">
 
-                <!-- Left Purple Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#523EC5] pl-4 pr-2 sm:pl-5 sm:pr-3 md:pl-6 md:pr-4 rounded-[50px] font-manrope text-sm sm:text-base md:text-xl font-medium whitespace-nowrap">
-                  Hire me on Upwork
+                <!-- Gradient Background -->
+                <div id="cta-blend" class="absolute inset-0 z-0 pointer-events-none rounded-[50px]
+                opacity-0
+                bg-gradient-to-r
+                from-[#5B43E8]
+                via-[#267F55]
+                to-[#12A000]">
                 </div>
 
+
+                <!-- Left Purple Segment -->
+                <div id="cta-left" class="flex h-full items-center justify-center
+                bg-[#523EC5]
+                pl-4 pr-3
+                sm:pl-5 sm:pr-4
+                md:pl-6 md:pr-5
+                rounded-[50px]
+                font-manrope text-sm sm:text-base md:text-xl
+                font-medium whitespace-nowrap
+                z-10">
+
+                  Hire me on Upwork
+
+                </div>
+
+
                 <!-- Inner Joint Graphic -->
-                <img src="assets/images/cta-button-join.svg" alt=""
-                  class="h-8 sm:h-10 md:h-11.5 w-3 sm:w-3.5 md:w-4.25 shrink-0 select-none pointer-events-none no-parallax -mx-0.75" />
+                <div id="cta-join" class="h-full flex items-center justify-center
+                -mx-[6px]
+                z-20
+                shrink-0
+                will-change-transform">
+
+                  <img src="assets/images/cta-button-join.svg" alt="" class="h-8 sm:h-10 md:h-11.5
+                    w-3 sm:w-3.5 md:w-4.25
+                    pointer-events-none
+                    no-parallax" />
+
+                </div>
+
 
                 <!-- Right Green Segment -->
-                <div
-                  class="flex h-full items-center justify-center bg-[#108A00] pl-2 pr-4 sm:pl-3 sm:pr-5 md:pl-4 md:pr-6 rounded-[50px]">
-                  <img src="assets/images/cta-up.svg" alt="Upwork"
-                    class="h-full w-full shrink-0 select-none no-parallax" />
+                <div id="cta-right" class="flex h-full items-center justify-center
+                bg-[#108A00]
+                pl-3 pr-4
+                sm:pl-4 sm:pr-5
+                md:pl-5 md:pr-6
+                rounded-[50px]
+                z-10
+                shrink-0
+                will-change-transform">
+
+                  <img id="cta-up" src="assets/images/cta-up.svg" alt="Upwork" class="w-full no-parallax" />
+
                 </div>
 
               </a>

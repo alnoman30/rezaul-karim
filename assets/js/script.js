@@ -62,54 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   function updateDesktopVisibility() {
-
     if (window.innerWidth < 1024) {
       showDesktopElements();
       return;
     }
 
     const currentScrollY = window.scrollY;
-    const scrollDifference = currentScrollY - lastScrollY;
 
-    // Always show at the very top
+    // Show at top, hide on any downward scroll
     if (currentScrollY <= 20) {
       showDesktopElements();
-    }
-
-    // Scrolling down
-    else if (scrollDifference > 0) {
+    } else {
       hideDesktopElements();
-    }
-
-    // Scrolling up
-    else if (scrollDifference < 0) {
-      showDesktopElements();
     }
 
     lastScrollY = currentScrollY;
   }
 
 
-  function hideDesktopElements() {
-
-    if (desktopLogo) {
-      desktopLogo.style.opacity = "0";
-      desktopLogo.style.visibility = "hidden";
-      desktopLogo.style.transform = "translateY(-10px)";
-      desktopLogo.style.pointerEvents = "none";
-    }
-
-    if (desktopCta) {
-      desktopCta.style.opacity = "0";
-      desktopCta.style.visibility = "hidden";
-      desktopCta.style.transform = "translateY(-10px)";
-      desktopCta.style.pointerEvents = "none";
-    }
-  }
-
-
   function showDesktopElements() {
-
     if (desktopLogo) {
       desktopLogo.style.opacity = "1";
       desktopLogo.style.visibility = "visible";
@@ -126,44 +97,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  function hideDesktopElements() {
+    if (desktopLogo) {
+      desktopLogo.style.opacity = "0";
+      desktopLogo.style.visibility = "hidden";
+      desktopLogo.style.transform = "translateY(-10px)";
+      desktopLogo.style.pointerEvents = "none";
+    }
+
+    if (desktopCta) {
+      desktopCta.style.opacity = "0";
+      desktopCta.style.visibility = "hidden";
+      desktopCta.style.transform = "translateY(-10px)";
+      desktopCta.style.pointerEvents = "none";
+    }
+  }
+
+
   /* =========================================================
      PROGRESS RING
   ========================================================= */
 
   function createRing() {
-
-    if (
-      !navWrap ||
-      !nav ||
-      window.innerWidth < 1024
-    ) {
+    if (!navWrap || !nav || window.innerWidth < 1024) {
       return;
     }
 
     const old = navWrap.querySelector(".progress-ring");
-
     if (old) {
       old.remove();
     }
 
-    const {
-      width,
-      height
-    } = nav.getBoundingClientRect();
+    const { width, height } = nav.getBoundingClientRect();
 
     const stroke = 2;
     const radius = height / 2 - stroke / 2;
 
     const ns = "http://www.w3.org/2000/svg";
-
     const svg = document.createElementNS(ns, "svg");
 
     svg.classList.add("progress-ring");
-
-    svg.setAttribute(
-      "viewBox",
-      `0 0 ${width} ${height}`
-    );
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
 
     svg.style.cssText = `
       position: absolute;
@@ -179,74 +153,22 @@ document.addEventListener("DOMContentLoaded", () => {
        GRADIENT
     ===================================================== */
 
-    const defs =
-      document.createElementNS(ns, "defs");
+    const defs = document.createElementNS(ns, "defs");
+    const gradient = document.createElementNS(ns, "linearGradient");
 
-    const gradient =
-      document.createElementNS(
-        ns,
-        "linearGradient"
-      );
+    gradient.setAttribute("id", "navGradient");
+    gradient.setAttribute("x1", "100%");
+    gradient.setAttribute("y1", "0%");
+    gradient.setAttribute("x2", "0%");
+    gradient.setAttribute("y2", "0%");
 
-    gradient.setAttribute(
-      "id",
-      "navGradient"
-    );
+    const green = document.createElementNS(ns, "stop");
+    green.setAttribute("offset", "14.71%");
+    green.setAttribute("stop-color", "#108A00");
 
-    gradient.setAttribute(
-      "x1",
-      "100%"
-    );
-
-    gradient.setAttribute(
-      "y1",
-      "0%"
-    );
-
-    gradient.setAttribute(
-      "x2",
-      "0%"
-    );
-
-    gradient.setAttribute(
-      "y2",
-      "0%"
-    );
-
-
-    const green =
-      document.createElementNS(
-        ns,
-        "stop"
-      );
-
-    green.setAttribute(
-      "offset",
-      "14.71%"
-    );
-
-    green.setAttribute(
-      "stop-color",
-      "#108A00"
-    );
-
-
-    const purple =
-      document.createElementNS(
-        ns,
-        "stop"
-      );
-
-    purple.setAttribute(
-      "offset",
-      "85.29%"
-    );
-
-    purple.setAttribute(
-      "stop-color",
-      "#523EC5"
-    );
-
+    const purple = document.createElementNS(ns, "stop");
+    purple.setAttribute("offset", "85.29%");
+    purple.setAttribute("stop-color", "#523EC5");
 
     gradient.appendChild(green);
     gradient.appendChild(purple);
@@ -259,11 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
        RING
     ===================================================== */
 
-    ring =
-      document.createElementNS(
-        ns,
-        "rect"
-      );
+    ring = document.createElementNS(ns, "rect");
 
     const x = stroke / 2;
     const y = stroke / 2;
@@ -280,45 +198,23 @@ document.addEventListener("DOMContentLoaded", () => {
     ring.setAttribute("ry", radius);
 
     ring.setAttribute("fill", "none");
+    ring.setAttribute("stroke", "url(#navGradient)");
+    ring.setAttribute("stroke-width", stroke);
+    ring.setAttribute("stroke-linecap", "round");
+    ring.setAttribute("stroke-linejoin", "round");
 
-    ring.setAttribute(
-      "stroke",
-      "url(#navGradient)"
-    );
-
-    ring.setAttribute(
-      "stroke-width",
-      stroke
-    );
-
-    ring.setAttribute(
-      "stroke-linecap",
-      "round"
-    );
-
-    ring.setAttribute(
-      "stroke-linejoin",
-      "round"
-    );
-
-
-    const straightWidth =
-      ringWidth - 2 * radius;
-
-    const straightHeight =
-      ringHeight - 2 * radius;
+    const straightWidth = ringWidth - 2 * radius;
+    const straightHeight = ringHeight - 2 * radius;
 
     const length =
       2 * straightWidth +
       2 * straightHeight +
       2 * Math.PI * radius;
 
-
     ring.style.strokeDasharray = length;
     ring.style.strokeDashoffset = length;
 
     svg.appendChild(ring);
-
     navWrap.appendChild(svg);
 
     updateProgress();
@@ -326,34 +222,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function updateProgress() {
-
-    if (!ring) {
-      return;
-    }
+    if (!ring) return;
 
     const scroll = window.scrollY;
-
     const maxScroll =
-      document.documentElement.scrollHeight -
-      window.innerHeight;
+      document.documentElement.scrollHeight - window.innerHeight;
 
-    if (maxScroll <= 0) {
-      return;
-    }
+    if (maxScroll <= 0) return;
 
-    const progress =
-      Math.min(
-        scroll / maxScroll,
-        1
-      );
+    const progress = Math.min(scroll / maxScroll, 1);
+    const length = parseFloat(ring.style.strokeDasharray);
 
-    const length =
-      parseFloat(
-        ring.style.strokeDasharray
-      );
-
-    ring.style.strokeDashoffset =
-      length * (1 - progress);
+    ring.style.strokeDashoffset = length * (1 - progress);
   }
 
 
@@ -362,116 +242,40 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   function initNavTheme() {
+    if (!hasGSAP || !nav || window.innerWidth < 1024) return;
 
-    if (
-      !hasGSAP ||
-      !nav ||
-      window.innerWidth < 1024
-    ) {
-      return;
-    }
+    const sections = document.querySelectorAll("[data-nav-theme]");
+    if (!sections.length) return;
 
-    const sections =
-      document.querySelectorAll(
-        "[data-nav-theme]"
-      );
-
-    if (!sections.length) {
-      return;
-    }
-
-
-    /*
-     * Remove previous theme triggers
-     */
-
-    ScrollTrigger.getAll().forEach(
-      (trigger) => {
-
-        if (
-          trigger.vars &&
-          trigger.vars.navThemeTrigger
-        ) {
-          trigger.kill();
-        }
-
+    ScrollTrigger.getAll().forEach((trigger) => {
+      if (trigger.vars && trigger.vars.navThemeTrigger) {
+        trigger.kill();
       }
-    );
+    });
 
+    gsap.set(nav.querySelectorAll(".nav-item"), { color: "#ffffff" });
 
-    /*
-     * Initial colors
-     */
-
-    gsap.set(
-      nav.querySelectorAll(".nav-item"),
-      {
-        color: "#ffffff"
-      }
-    );
-
-
-    const arrow =
-      nav.querySelector(
-        ".services-arrow"
-      );
-
+    const arrow = nav.querySelector(".services-arrow");
     if (arrow) {
-
-      gsap.set(
-        arrow,
-        {
-          color: "#ffffff"
-        }
-      );
-
+      gsap.set(arrow, { color: "#ffffff" });
     }
-
 
     if (logoText) {
-
-      gsap.set(
-        logoText,
-        {
-          color: "#ffffff"
-        }
-      );
-
+      gsap.set(logoText, { color: "#ffffff" });
     }
 
+    sections.forEach((section) => {
+      const theme = section.dataset.navTheme;
 
-    /*
-     * Create ScrollTrigger
-     */
-
-    sections.forEach(
-      (section) => {
-
-        const theme =
-          section.dataset.navTheme;
-
-        ScrollTrigger.create({
-
-          trigger: section,
-
-          start: "top 35%",
-          end: "bottom 35%",
-
-          navThemeTrigger: true,
-
-          onEnter: () => {
-            changeNavTheme(theme);
-          },
-
-          onEnterBack: () => {
-            changeNavTheme(theme);
-          }
-
-        });
-
-      }
-    );
-
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 35%",
+        end: "bottom 35%",
+        navThemeTrigger: true,
+        onEnter: () => changeNavTheme(theme),
+        onEnterBack: () => changeNavTheme(theme)
+      });
+    });
 
     updateCurrentNavTheme();
   }
@@ -482,148 +286,71 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   function changeNavTheme(theme) {
+    if (!hasGSAP || !nav || window.innerWidth < 1024) return;
 
-    if (
-      !hasGSAP ||
-      !nav ||
-      window.innerWidth < 1024
-    ) {
-      return;
-    }
-
-    const navItems =
-      nav.querySelectorAll(
-        ".nav-item"
-      );
-
-    const arrow =
-      nav.querySelector(
-        ".services-arrow"
-      );
-
-
-    /* =====================================================
-       LIGHT SECTION
-    ===================================================== */
+    const navItems = nav.querySelectorAll(".nav-item");
+    const arrow = nav.querySelector(".services-arrow");
 
     if (theme === "light") {
+      gsap.to(navItems, {
+        color: "#111111",
+        duration: 0.35,
+        ease: "power2.out",
+        overwrite: true
+      });
 
-      // Nav links
-      gsap.to(
-        navItems,
-        {
+      if (arrow) {
+        gsap.to(arrow, {
           color: "#111111",
           duration: 0.35,
           ease: "power2.out",
           overwrite: true
-        }
-      );
-
-
-      // Services arrow
-      if (arrow) {
-
-        gsap.to(
-          arrow,
-          {
-            color: "#111111",
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true
-          }
-        );
-
+        });
       }
 
-
-      // Logo
       if (logoText) {
-
-        gsap.to(
-          logoText,
-          {
-            color: "#111111",
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true
-          }
-        );
-
+        gsap.to(logoText, {
+          color: "#111111",
+          duration: 0.35,
+          ease: "power2.out",
+          overwrite: true
+        });
       }
 
-
-      // Active item remains white
-      const active =
-        nav.querySelector(
-          ".nav-item.active"
-        );
-
+      const active = nav.querySelector(".nav-item.active");
       if (active) {
-
-        gsap.to(
-          active,
-          {
-            color: "#ffffff",
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true
-          }
-        );
-
-      }
-
-    }
-
-
-    /* =====================================================
-       DARK SECTION
-    ===================================================== */
-
-    else {
-
-      // Nav links
-      gsap.to(
-        navItems,
-        {
+        gsap.to(active, {
           color: "#ffffff",
           duration: 0.35,
           ease: "power2.out",
           overwrite: true
-        }
-      );
+        });
+      }
+    } else {
+      gsap.to(navItems, {
+        color: "#ffffff",
+        duration: 0.35,
+        ease: "power2.out",
+        overwrite: true
+      });
 
-
-      // Services arrow
       if (arrow) {
-
-        gsap.to(
-          arrow,
-          {
-            color: "#ffffff",
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true
-          }
-        );
-
+        gsap.to(arrow, {
+          color: "#ffffff",
+          duration: 0.35,
+          ease: "power2.out",
+          overwrite: true
+        });
       }
 
-
-      // Logo
       if (logoText) {
-
-        gsap.to(
-          logoText,
-          {
-            color: "#ffffff",
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true
-          }
-        );
-
+        gsap.to(logoText, {
+          color: "#ffffff",
+          duration: 0.35,
+          ease: "power2.out",
+          overwrite: true
+        });
       }
-
     }
   }
 
@@ -633,54 +360,23 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   function updateCurrentNavTheme() {
+    if (!hasGSAP || window.innerWidth < 1024) return;
 
-    if (
-      !hasGSAP ||
-      window.innerWidth < 1024
-    ) {
-      return;
-    }
+    const sections = document.querySelectorAll("[data-nav-theme]");
+    if (!sections.length) return;
 
-    const sections =
-      document.querySelectorAll(
-        "[data-nav-theme]"
-      );
-
-    if (!sections.length) {
-      return;
-    }
-
-    const navPosition =
-      window.innerHeight * 0.35;
-
+    const navPosition = window.innerHeight * 0.35;
     let currentSection = null;
 
-
-    sections.forEach(
-      (section) => {
-
-        const rect =
-          section.getBoundingClientRect();
-
-        if (
-          rect.top <= navPosition &&
-          rect.bottom >= navPosition
-        ) {
-
-          currentSection = section;
-
-        }
-
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= navPosition && rect.bottom >= navPosition) {
+        currentSection = section;
       }
-    );
-
+    });
 
     if (currentSection) {
-
-      changeNavTheme(
-        currentSection.dataset.navTheme
-      );
-
+      changeNavTheme(currentSection.dataset.navTheme);
     }
   }
 
@@ -690,31 +386,18 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   function handleScroll() {
-
     const scroll = window.scrollY;
 
-
     if (window.innerWidth < 1024) {
-
       if (header) {
-
-        header.classList.toggle(
-          "mobile-scrolled",
-          scroll > 20
-        );
-
+        header.classList.toggle("mobile-scrolled", scroll > 20);
       }
-
       showDesktopElements();
-
       lastScrollY = scroll;
-
       return;
     }
 
-
     updateProgress();
-
     updateDesktopVisibility();
   }
 
@@ -724,70 +407,21 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("is-open");
+      toggle.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("menu-open", open);
+    });
 
-    toggle.addEventListener(
-      "click",
-      () => {
-
-        const open =
-          menu.classList.toggle(
-            "is-open"
-          );
-
-        toggle.classList.toggle(
-          "is-open",
-          open
-        );
-
-        toggle.setAttribute(
-          "aria-expanded",
-          String(open)
-        );
-
-        document.body.classList.toggle(
-          "menu-open",
-          open
-        );
-
-      }
-    );
-
-
-    /*
-     * Close menu after clicking a link
-     */
-
-    menu
-      .querySelectorAll("a")
-      .forEach(
-        (link) => {
-
-          link.addEventListener(
-            "click",
-            () => {
-
-              menu.classList.remove(
-                "is-open"
-              );
-
-              toggle.classList.remove(
-                "is-open"
-              );
-
-              toggle.setAttribute(
-                "aria-expanded",
-                "false"
-              );
-
-              document.body.classList.remove(
-                "menu-open"
-              );
-
-            }
-          );
-
-        }
-      );
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+      });
+    });
   }
 
 
@@ -795,37 +429,14 @@ document.addEventListener("DOMContentLoaded", () => {
      ESCAPE CLOSES MOBILE MENU
   ========================================================= */
 
-  document.addEventListener(
-    "keydown",
-    (event) => {
-
-      if (
-        event.key === "Escape" &&
-        toggle &&
-        menu
-      ) {
-
-        menu.classList.remove(
-          "is-open"
-        );
-
-        toggle.classList.remove(
-          "is-open"
-        );
-
-        toggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-        document.body.classList.remove(
-          "menu-open"
-        );
-
-      }
-
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && toggle && menu) {
+      menu.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
     }
-  );
+  });
 
 
   /* =========================================================
@@ -835,26 +446,15 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener(
     "scroll",
     () => {
-
       if (!ticking) {
-
-        window.requestAnimationFrame(
-          () => {
-
-            handleScroll();
-
-            ticking = false;
-
-          }
-        );
-
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
         ticking = true;
       }
-
     },
-    {
-      passive: true
-    }
+    { passive: true }
   );
 
 
@@ -862,65 +462,25 @@ document.addEventListener("DOMContentLoaded", () => {
      RESIZE LISTENER
   ========================================================= */
 
-  window.addEventListener(
-    "resize",
-    () => {
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
 
-      clearTimeout(
-        resizeTimer
-      );
+    resizeTimer = setTimeout(() => {
+      if (window.innerWidth >= 1024) {
+        createRing();
+        updateDesktopVisibility();
+        initNavTheme();
 
-      resizeTimer =
-        setTimeout(
-          () => {
+        if (hasGSAP) {
+          ScrollTrigger.refresh();
+        }
+      } else {
+        showDesktopElements();
+      }
 
-            if (
-              window.innerWidth >= 1024
-            ) {
-
-              createRing();
-
-              updateDesktopVisibility();
-
-              initNavTheme();
-
-              if (hasGSAP) {
-                ScrollTrigger.refresh();
-              }
-
-            } else {
-
-              showDesktopElements();
-
-            }
-
-            lastScrollY =
-              window.scrollY;
-
-          },
-          150
-        );
-
-    }
-  );
-
-
-  /* =========================================================
-     SMOOTH LOGO + CTA VISIBILITY
-  ========================================================= */
-
-  if (desktopLogo) {
-
-    desktopLogo.style.transition =
-      "opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease";
-  }
-
-
-  if (desktopCta) {
-
-    desktopCta.style.transition =
-      "opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease";
-  }
+      lastScrollY = window.scrollY;
+    }, 150);
+  });
 
 
   /* =========================================================
@@ -928,11 +488,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================================= */
 
   createRing();
-
   handleScroll();
-
   initNavTheme();
-
 });
 
 
@@ -1108,12 +665,21 @@ gsap.utils.toArray(".parallax img:not(.no-parallax)").forEach(img => {
 });
 
 // Hero section content animations
+document.addEventListener("DOMContentLoaded", () => {
+  const heroSection = document.getElementById("hero-section");
+  const watermarkText = document.getElementById("watermark-text");
+  const personCutout = document.getElementById("person-cutout");
 
-const heroSection = document.getElementById("hero-section");
-const watermarkText = document.getElementById("watermark-text");
-const personCutout = document.getElementById("person-cutout");
-
-if (heroSection && watermarkText && personCutout) {
+  // Safety check: Exit early if GSAP, ScrollTrigger, or any hero element is missing
+  if (
+    typeof gsap === "undefined" ||
+    typeof ScrollTrigger === "undefined" ||
+    !heroSection ||
+    !watermarkText ||
+    !personCutout
+  ) {
+    return;
+  }
 
   const heroTimeline = gsap.timeline({
     paused: true
@@ -1163,7 +729,7 @@ if (heroSection && watermarkText && personCutout) {
       heroTimeline.restart();
     }
   });
-}
+});
 
 
 // Magnetic pull common cta button
@@ -1211,153 +777,443 @@ if (heroSection && watermarkText && personCutout) {
 
 // Marquee section js
 document.addEventListener("DOMContentLoaded", function () {
-  const splide = new Splide("#marquee-splide", {
-    type: "loop",
-    drag: "free",
-    focus: "center",
-    arrows: false,
-    pagination: false,
+  const marqueeElement = document.querySelector("#marquee-splide");
 
-    // Show 6 items on large screens
-    perPage: 6,
-    perMove: 1,
+  if (marqueeElement) {
+    const splide = new Splide(marqueeElement, {
+      type: "loop",
+      drag: "free",
+      focus: "center",
+      arrows: false,
+      pagination: false,
 
-    gap: "24px",
+      // Show 6 items on large screens
+      perPage: 6,
+      perMove: 1,
 
-    autoScroll: {
-      speed: 1,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-    },
+      gap: "24px",
 
-    breakpoints: {
-      // Tablet
-      1023: {
-        perPage: 4,
-        gap: "20px",
+      autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        pauseOnFocus: false,
       },
 
-      // Mobile
-      767: {
-        perPage: 3,
-        gap: "12px",
+      breakpoints: {
+        // Tablet
+        1023: {
+          perPage: 4,
+          gap: "20px",
+        },
+
+        // Mobile
+        767: {
+          perPage: 3,
+          gap: "12px",
+        },
+        // Mobile
+        500: {
+          perPage: 2,
+          gap: "5px",
+        },
       },
-      // Mobile
-      500: {
-        perPage: 2,
-        gap: "5px",
-      },
-    },
-
-  });
-
-  splide.mount(window.splide.Extensions);
-});
-
-
-//  statistic counter js
-document.addEventListener('DOMContentLoaded', () => {
-
-  const counters = document.querySelectorAll('.counter');
-
-  function formatNum(n, format) {
-    return format === 'comma'
-      ? n.toLocaleString()
-      : n;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-      if (!entry.isIntersecting) return;
-
-      const el = entry.target;
-
-      if (el.dataset.animated === 'true') return;
-
-      el.dataset.animated = 'true';
-
-      const target = parseInt(el.dataset.target);
-      const suffix = el.dataset.suffix || '';
-      const prefix = el.dataset.prefix || '';
-      const format = el.dataset.format || '';
-
-      const duration = 1800;
-      const steps = 60;
-      const increment = target / steps;
-      const interval = duration / steps;
-
-      let current = 0;
-
-      const timer = setInterval(() => {
-
-        current += increment;
-
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-
-        el.textContent =
-          prefix +
-          formatNum(Math.round(current), format) +
-          suffix;
-
-      }, interval);
-
-      observer.unobserve(el);
-
     });
 
-  }, {
-    threshold: 0.5
-  });
-
-  counters.forEach(counter => {
-    observer.observe(counter);
-  });
-
+    splide.mount(window.splide.Extensions);
+  }
 });
-
 
 // Testimonial slider js
 document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#testimonial-slider", {
-    type: "loop",
+  const testimonialElement = document.querySelector("#testimonial-slider");
 
-    perPage: 3,
-    perMove: 1,
-    gap: "24px",
+  if (testimonialElement) {
+    new Splide(testimonialElement, {
+      type: "loop",
 
-    arrows: false,
-    pagination: true,
+      perPage: 3,
+      perMove: 1,
+      gap: "24px",
 
-    drag: true,
-    pauseOnHover: true,
-    pauseOnFocus: true,
+      arrows: false,
+      pagination: true,
 
-    autoScroll: {
-      speed: 1,
+      drag: true,
       pauseOnHover: true,
       pauseOnFocus: true,
-    },
 
-    breakpoints: {
-      1023: {
-        perPage: 2,
-        gap: "20px",
+      autoScroll: {
+        speed: 1,
+        pauseOnHover: true,
+        pauseOnFocus: true,
       },
 
-      767: {
-        perPage: 1,
-        gap: "16px",
+      breakpoints: {
+        1023: {
+          perPage: 2,
+          gap: "20px",
+        },
 
-        // Stop auto-scroll on mobile
-        autoScroll: false,
+        767: {
+          perPage: 1,
+          gap: "16px",
+
+          // Stop auto-scroll on mobile
+          autoScroll: false,
+        },
       },
-    },
-  }).mount(window.splide.Extensions);
+    }).mount(window.splide.Extensions);
+  }
 });
 
-//
+
+// Statistic counter JS
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+
+  function formatNum(n, format) {
+    return format === 'comma' ? n.toLocaleString() : n;
+  }
+
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    if (isNaN(target)) return;
+
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const format = el.dataset.format || '';
+    const duration = 1800; // Total time in ms
+    let startTime = null;
+
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      // Easing function (easeOutExpo for smooth slowing down at the end)
+      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const currentVal = Math.round(easeProgress * target);
+
+      el.textContent = prefix + formatNum(currentVal, format) + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target;
+      if (el.dataset.animated === 'true') return;
+
+      el.dataset.animated = 'true';
+      animateCounter(el);
+      observer.unobserve(el);
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+
+
+
+
+
+// CTA button animation
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const buttons = document.querySelectorAll("#cta-button");
+
+    if (!buttons.length) return;
+
+    buttons.forEach((btn) => {
+
+        const leftSeg = btn.querySelector("#cta-left");
+        const join = btn.querySelector("#cta-join");
+        const rightSeg = btn.querySelector("#cta-right");
+        const blend = btn.querySelector("#cta-blend");
+
+        if (!leftSeg || !join || !rightSeg || !blend) return;
+
+        const hoverTl = gsap.timeline({
+            paused: true,
+            defaults: {
+                ease: "power3.inOut"
+            }
+        });
+
+        hoverTl
+
+            // Move right section LEFT
+            .to(rightSeg, {
+                x: -3,
+                paddingLeft: "12px",
+                paddingRight: "2px",
+                duration: 0.34,
+                ease: "power2.inOut"
+            }, 0)
+
+            // Hide center joint
+            .to(join, {
+                opacity: 0,
+                scaleX: 0.15,
+                duration: 0.12,
+                ease: "power2.out"
+            }, 0)
+
+            // Flatten inner corners
+            .to(leftSeg, {
+                borderTopRightRadius: 0,
+                borderBottomRightRadius: 0,
+                duration: 0.12,
+                ease: "power2.inOut"
+            }, 0)
+
+            .to(rightSeg, {
+                borderTopLeftRadius: 0,
+                borderBottomLeftRadius: 0,
+                duration: 0.12,
+                ease: "power2.inOut"
+            }, 0)
+
+            // Gradient fades in
+            .to(blend, {
+                opacity: 1,
+                duration: 0.20,
+                ease: "power2.out"
+            }, 0)
+
+            // Fade purple away
+            .to(leftSeg, {
+                backgroundColor: "rgba(82, 62, 197, 0)",
+                duration: 0.20,
+                ease: "power2.inOut"
+            }, 0.02)
+
+            // Fade green away
+            .to(rightSeg, {
+                backgroundColor: "rgba(16, 138, 0, 0)",
+                duration: 0.20,
+                ease: "power2.inOut"
+            }, 0.02)
+
+            // Brightness comes in last
+            .to(blend, {
+                filter: "brightness(1.10)",
+                duration: 0.15,
+                ease: "power2.out"
+            }, 0.04);
+
+        // Hover IN
+        btn.addEventListener("mouseenter", () => {
+            hoverTl.play();
+        });
+
+        // Hover OUT
+        btn.addEventListener("mouseleave", () => {
+            hoverTl.reverse();
+        });
+
+    });
+
+});
+
+
+
+
+//  Project showcase cursor pointer
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach((card) => {
+    const cursor = card.querySelector(".custom-cursor");
+    if (!cursor) return;
+
+    // Smooth physics configuration (0.7s duration for smooth trailing)
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.7, ease: "power2.out" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.7, ease: "power2.out" });
+
+    let prevX = 0;
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+
+      // Center badge on mouse position relative to card boundaries
+      const mouseX = e.clientX - rect.left - cursor.offsetWidth / 2;
+      const mouseY = e.clientY - rect.top - cursor.offsetHeight / 2;
+
+      xTo(mouseX);
+      yTo(mouseY);
+
+      // Dynamic tilt during movement
+      const deltaX = e.clientX - prevX;
+      const tilt = Math.min(Math.max(deltaX * 0.15, -12), 12);
+      gsap.to(cursor, { rotation: -6 + tilt, duration: 0.4, ease: "power1.out" });
+
+      prevX = e.clientX;
+    });
+
+    // Reveal badge on enter
+    card.addEventListener("mouseenter", () => {
+      gsap.to(cursor, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+        ease: "back.out(1.5)",
+      });
+    });
+
+    // Hide badge on leave
+    card.addEventListener("mouseleave", () => {
+      gsap.to(cursor, {
+        opacity: 0,
+        scale: 0.4,
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    });
+  });
+});
+
+
+// Work page Filter logic
+document.addEventListener('DOMContentLoaded', () => {
+    const ITEMS_PER_PAGE = 5;
+    let currentPage = 1;
+    let filteredCards = [];
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allCards = Array.from(document.querySelectorAll('.project-card'));
+    const noResultsState = document.getElementById('no-results-state');
+    const selectedCatText = document.getElementById('selected-category-name');
+    const paginationWrapper = document.getElementById('pagination-wrapper');
+    const paginationNumbers = document.getElementById('pagination-numbers');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+
+    // 🛑 EXIT EARLY: If this page doesn't have work filter cards or controls, do nothing
+    if (allCards.length === 0 && filterBtns.length === 0) {
+      return;
+    }
+
+    function updateDisplay() {
+      // Hide all cards initially
+      allCards.forEach(card => card.style.display = 'none');
+
+      if (filteredCards.length === 0) {
+        // Show empty "No items found" state
+        if (noResultsState) noResultsState.classList.remove('hidden');
+        if (paginationWrapper) paginationWrapper.classList.add('hidden');
+      } else {
+        // Hide empty state and show pagination
+        if (noResultsState) noResultsState.classList.add('hidden');
+        if (paginationWrapper) paginationWrapper.classList.remove('hidden');
+
+        // Calculate slice for 5 items per page
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        const cardsToDisplay = filteredCards.slice(startIndex, endIndex);
+
+        cardsToDisplay.forEach(card => {
+          card.style.display = 'grid';
+        });
+
+        renderPaginationControls();
+      }
+    }
+
+    function renderPaginationControls() {
+      if (!paginationWrapper || !paginationNumbers) return;
+
+      const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE);
+
+      // Hide entire pagination bar if 1 page or less
+      if (totalPages <= 1) {
+        paginationWrapper.classList.add('hidden');
+        return;
+      }
+
+      paginationWrapper.classList.remove('hidden');
+      paginationNumbers.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = i;
+        btn.className = `page-num flex h-10 w-10 items-center justify-center rounded-full transition-colors ${
+          i === currentPage
+            ? 'bg-[#523EC5] text-white'
+            : 'bg-white text-[#555555] border border-[#D8D8D8] hover:border-[#523EC5] hover:text-[#523EC5]'
+        }`;
+
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          updateDisplay();
+        });
+
+        paginationNumbers.appendChild(btn);
+      }
+
+      // Update Prev/Next disabled states safely
+      if (prevBtn) prevBtn.disabled = currentPage === 1;
+      if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+    }
+
+    // --- FILTER TAB CLICK HANDLER ---
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-[#523EC5]', 'text-white', 'active');
+          b.classList.add('bg-[#EAE8F7]', 'text-[#555555]');
+        });
+
+        btn.classList.add('bg-[#523EC5]', 'text-white', 'active');
+        btn.classList.remove('bg-[#EAE8F7]', 'text-[#555555]');
+
+        const filterValue = btn.getAttribute('data-filter');
+        const filterLabel = btn.innerText.trim();
+
+        // Update empty state text with category name
+        if (selectedCatText) {
+          selectedCatText.textContent = `"${filterLabel}"`;
+        }
+
+        // Filter projects
+        if (filterValue === 'all') {
+          filteredCards = [...allCards];
+        } else {
+          filteredCards = allCards.filter(card => card.getAttribute('data-category') === filterValue);
+        }
+
+        currentPage = 1; // Reset to first page
+        updateDisplay();
+      });
+    });
+
+    // --- PREV / NEXT BUTTON HANDLERS ---
+    prevBtn?.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updateDisplay();
+      }
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE);
+      if (currentPage < totalPages) {
+        currentPage++;
+        updateDisplay();
+      }
+    });
+
+    // Initial setup on page load
+    filteredCards = [...allCards];
+    updateDisplay();
+});
+
