@@ -1412,3 +1412,58 @@ body.menu-open {
   background: linear-gradient(132deg, #FFF 80.61%, #FFB880 97.87%) !important;
   box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.12) !important;
 }
+
+/*  */
+.principle-card {
+  position: relative;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.principle-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 3px;
+
+  background: conic-gradient(
+    from var(--card-angle),
+    transparent 0%,
+    #F36D04 8%,
+    #523EC5 14%,
+    transparent 22%
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  animation: card-border-spin 3.5s linear infinite;
+  animation-play-state: paused;
+}
+
+.principle-card-active::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.principle-card-active {
+  background: linear-gradient(132deg, #FFF 80.61%, #FFB880 97.87%) !important;
+  box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.principle-card-hover:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.principle-card-hover:hover {
+  background: linear-gradient(132deg, #FFF 80.61%, #FFB880 97.87%) !important;
+  box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.12) !important;
+}

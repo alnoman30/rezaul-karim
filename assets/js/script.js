@@ -1217,3 +1217,95 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDisplay();
 });
 
+
+// About page - principle stager effect
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".principle-card", {
+    scrollTrigger: {
+      trigger: ".principle-card-container",
+      start: "top 80%",
+      toggleActions: "play none none none",
+      once: true
+    },
+
+    opacity: 0,
+    y: 60,
+
+    duration: 1.2,
+    delay: 0.2,
+    ease: "power3.out",
+
+    stagger: 0.35
+  });
+});
+
+// Home page - Process number stagger
+document.addEventListener("DOMContentLoaded", () => {
+  // Register GSAP ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Stagger animation ONLY for the process number SVGs
+  gsap.from(".process-number", {
+    scrollTrigger: {
+      trigger: ".process-card-container", // Triggers when the card container enters the viewport
+      start: "top 80%",
+      toggleActions: "play none none none",
+      once: true
+    },
+    opacity: 0,
+    y: 40,            // Slides up smoothly into position
+    scale: 0.8,       // Starts slightly smaller for a polished feel
+    duration: 1.0,
+    delay: 0.2,
+    ease: "power3.out",
+    stagger: 0.25     // Staggers each number step-by-step
+  });
+});
+
+// Upwork profile hire btn
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(Flip);
+
+  const hireBtn = document.querySelector(".profile-hire-btn");
+  const upworkIcon = hireBtn?.querySelector(".upwork-icon");
+
+  if (!hireBtn || !upworkIcon) return;
+
+  hireBtn.addEventListener("mouseenter", () => {
+    const state = Flip.getState([hireBtn, upworkIcon]);
+
+    hireBtn.prepend(upworkIcon);
+
+    gsap.set(hireBtn, {
+      paddingLeft: "6px",
+      paddingRight: "36px"
+    });
+
+    Flip.from(state, {
+      duration: 0.75,
+      ease: "power2.out",
+      scale: true,
+      nested: true
+    });
+  });
+
+  hireBtn.addEventListener("mouseleave", () => {
+    const state = Flip.getState([hireBtn, upworkIcon]);
+
+    hireBtn.appendChild(upworkIcon);
+
+    gsap.set(hireBtn, {
+      paddingLeft: "36px",
+      paddingRight: "6px"
+    });
+
+    Flip.from(state, {
+      duration: 0.32,
+      ease: "power2.out",
+      scale: true,
+      nested: true
+    });
+  });
+});
